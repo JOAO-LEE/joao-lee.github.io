@@ -17,7 +17,7 @@ export const projects: Array<Project> = [
     id: 1,
     name: "Google Clone",
     githubRepository: "https://github.com/JOAO-LEE/google_clone",
-    description: "",
+    description: "A replica of the most used search engine. It is possible to search websites, images and it has a \"I'm feeling lucky\" button that randomize the search. Shows in the footer the country the user it's using the app from.",
     image: googleCloneImage,
     deployed: true,
     applicationUrl: "https://google-clone-eta-henna.vercel.app/",

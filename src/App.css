@@ -31,7 +31,7 @@
 
 body {
   font-family: "Unbounded", sans-serif;
-  background-color: var(--palPurple);
+  /* background-color: var(--palPurple); */
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
