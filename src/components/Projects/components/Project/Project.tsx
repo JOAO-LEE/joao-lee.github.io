@@ -1,9 +1,8 @@
-import { Project as ProjectModel } from "../../../../model/Project"
-import ProjectActions from "../ProjectActions/ProjectActions"
+import { Project as ProjectModel } from "../../../../model/Project";
+import ProjectActions from "../ProjectActions/ProjectActions";
 import "./Project.css";
 
 function Project({ project, index }: { project: ProjectModel, index: number }) {
-  // let i = index;
   return (
     <div
     key={index} 

@@ -31,14 +31,13 @@
 
 body {
   font-family: "Unbounded", sans-serif;
-  /* background-color: var(--palPurple); */
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  background-color: #00061d;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
   color: var(--grayish);
+  position: relative;
 }
 
 

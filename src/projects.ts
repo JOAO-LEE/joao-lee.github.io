@@ -1,6 +1,6 @@
-import xCloneImage from './images/x-clone.png';
-import googleCloneImage from './images/google-clone.png';
-import { Project } from './model/Project';
+import xCloneImage from "./images/x-clone.png";
+import googleCloneImage from "./images/google-clone.png";
+import { Project } from "./model/Project";
 
 export const projects: Array<Project> = [
   {
@@ -17,7 +17,7 @@ export const projects: Array<Project> = [
     id: 1,
     name: "Google Clone",
     githubRepository: "https://github.com/JOAO-LEE/google_clone",
-    description: "A replica of the most used search engine. It is possible to search websites, images and it has a \"I'm feeling lucky\" button that randomize the search. Shows in the footer the country the user it's using the app from.",
+    description: "A replica of the most used search engine. It is possible to search websites, images and it has a \"I'm feeling lucky\" button that randomize the search. The app's footer shows the country the user is using the app from.",
     image: googleCloneImage,
     deployed: true,
     applicationUrl: "https://google-clone-eta-henna.vercel.app/",
