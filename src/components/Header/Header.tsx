@@ -23,7 +23,7 @@ export function Header() {
     <>
       <div 
       ref={menuRef} 
-      className={`menu ${open ? "open" : "close"} lg:hidden h-full backdrop-blur-lg text-white w-full`}
+      className={`menu ${open ? "open" : "close"} lg:hidden h-full backdrop-blur-lg text-white w-full sticky-header`}
       >
         <X 
         className={`size-10 ${open ? "x-open" : "x-close"}`} 

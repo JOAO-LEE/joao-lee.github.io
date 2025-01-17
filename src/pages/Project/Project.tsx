@@ -1,8 +1,9 @@
-// import {useHistory} from 'react-router-dom' 
+import { useParams } from "react-router"
 
 export default function Project() {
-//  const {} = useHistory()
+ const params = useParams();
+//  console.log(!)
   return (
-    <div>Project</div>
+    <div className="text-white">{+params.id!}</div>
   )
 }

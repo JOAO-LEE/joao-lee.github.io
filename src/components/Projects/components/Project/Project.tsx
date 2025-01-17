@@ -1,10 +1,12 @@
+import { Link } from "react-router";
 import { Project as ProjectModel } from "../../../../model/Project";
 import ProjectActions from "../ProjectActions/ProjectActions";
 import "./Project.css";
 
 function Project({ project, index }: { project: ProjectModel, index: number }) {
   return (
-    <div
+    <Link
+    to={`projects/${index}`}
     key={index} 
     className="bg-black/30 hover:bg-black/60 transition-all duration-500 w-full rounded-xl p-4 space-y-2 group hover:scale-[1.02] shadow-xl hover:shadow-2xl"
     >
@@ -16,10 +18,10 @@ function Project({ project, index }: { project: ProjectModel, index: number }) {
         >
           {project.name}
         </p>
-        <ProjectActions 
+        {/* <ProjectActions 
         applicationUrl={project.applicationUrl} 
         githubRepository={project.githubRepository} 
-        />
+        /> */}
       </div>
       <div className="flex gap-2 p-1">
         <img 
@@ -52,7 +54,7 @@ function Project({ project, index }: { project: ProjectModel, index: number }) {
           </ul>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
 

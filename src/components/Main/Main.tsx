@@ -3,7 +3,7 @@ import "./Main.css";
 
 function Main({ children }: { children: ReactNode }) {
   return (
-    <main className="main-content">
+    <main className="main-content relative">
       {children}
     </main>
   )

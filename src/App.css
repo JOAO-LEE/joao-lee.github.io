@@ -37,8 +37,9 @@ body {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
-  color: var(--grayish);
+  color: white;
   position: relative;
+  background-color: black;
 }
 
 

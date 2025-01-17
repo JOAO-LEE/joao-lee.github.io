@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.sticky-header {
+  padding: 1rem;
+  position: sticky;
+  top: 0px;
+  background-color: var(--bgColor);
+}
+
 @layer utilities {
   .nav-item {
     @apply relative cursor-pointer duration-500

@@ -3,7 +3,7 @@ import Intro from "../../components/Intro/Intro";
 import Main from "../../components/Main/Main";
 import Projects from "../../components/Projects/Projects";
 
-export default function Home() {
+export function Home() {
   return (
     <Main>
       <Intro />
