@@ -8,15 +8,15 @@
   }
 
   .nav-item:hover {
-    @apply text-pal-purple-300 scale-110 shadow-2xl shadow-pal-purple-300
+    /* @apply text-pal-purple-300 scale-110 shadow-2xl shadow-pal-purple-300 */
   }
   
   .nav-item::after {
-    @apply content-[''] bg-pal-purple-100 h-[3px] absolute w-[0%] left-0 -bottom-[5px] duration-[750ms] ease-in-out
+    /* @apply content-[''] bg-pal-purple-100 h-[3px] absolute w-[0%] left-0 -bottom-[5px] duration-[750ms] ease-in-out */
   }
 
   .nav-item:hover::after {
-    @apply w-[100%] bg-pal-orange-100 -translate-y-0.5
+    /* @apply w-[100%] bg-pal-orange-100 -translate-y-0.5 */
   }
 }
 
@@ -39,13 +39,11 @@
 }
 
 .menu {
-  
-  position: absolute;
+  position: fixed;
   padding: 1.5rem;
   top: 0;
   left: -20rem;
   width: 0%;
-  height: 100dvh;
   z-index: 10;
   transition: left 1000ms ease-in-out, width 1000ms ease-in;
 }

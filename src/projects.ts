@@ -1,5 +1,6 @@
 import xCloneImage from "./images/x-clone.png";
 import googleCloneImage from "./images/google-clone.png";
+import petMatchImage from "./images/petmatch.png";
 import { Project } from "./model/Project";
 
 export const projects: Array<Project> = [
@@ -22,5 +23,15 @@ export const projects: Array<Project> = [
     deployed: true,
     applicationUrl: "https://google-clone-eta-henna.vercel.app/",
     techStack: ["Next.js", "React.js", "TypeScript", "TailwindCSS", "Firebase"]
+  },
+  {
+    id: 2,
+    name: "PETMatch",
+    githubRepository: "https://pet-match-gamma.vercel.app/",
+    description: "PETMatch is a web application developed with JavaScript, HTML, and CSS to address the issue of pet abandonment, a prevalent problem in Brazil. The platform connects animals in need of a home with individuals interested in adopting, promoting responsible pet adoption through user registration and scheduled visits to partnered NGOs.",
+    image: petMatchImage,
+    deployed: true,
+    applicationUrl: "https://pet-match-gamma.vercel.app/",
+    techStack: ["HTML", "JavaScript", "CSS"]
   },
 ];

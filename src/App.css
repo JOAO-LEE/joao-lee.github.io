@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One+Outline&family=REM:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
   --bgGradientBlack: #00061d;
   --bgGradientPurple: #1d40d8;
@@ -30,7 +31,7 @@
 }
 
 body {
-  font-family: "Unbounded", sans-serif;
+  font-family: "REM", sans-serif;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
