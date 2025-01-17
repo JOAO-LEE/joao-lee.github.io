@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumar+One+Outline&family=REM:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --bgGradientBlack: #00061d;
   --bgGradientPurple: #1d40d8;
@@ -31,15 +36,15 @@
 }
 
 body {
-  font-family: "REM", sans-serif;
+  font-family: "Arimo", sans-serif;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
-  color: white;
+  color: black;
   position: relative;
-  background-color: var(--palPurple300);
+  /* background-color: var(--palPurple300); */
 }
 
 

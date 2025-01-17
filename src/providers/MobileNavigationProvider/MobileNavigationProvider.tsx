@@ -7,7 +7,7 @@ export function NavigationProvider({ children }: { children: ReactNode }) {
   const location = useLocation();
 
   useEffect(() => {
-    handleMobileNavigation()
+    setIsMobileNavigationOpen(false)
   }, [location]);
 
   const handleMobileNavigation = () => setIsMobileNavigationOpen(!isMobileNavigationOpen);

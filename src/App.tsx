@@ -7,8 +7,8 @@ import Projects from "./pages/Project/Project";
 // import { projects } from "./projects";
 import { Navigate, Route, Routes } from "react-router";
 import { Home } from "./pages/Home/Home";
-import "./App.css";
 import { Layout } from "./layout/Layout";
+import "./App.css";
 
 function App() {
   return (
@@ -18,13 +18,11 @@ function App() {
         <Route  path="projects"  element={<Projects />}>
           <Route element={<Navigate to="/" />} />
           <Route index path=":id" element={<Projects />} />
-      </Route>
         </Route>
+      </Route>
     </Routes>
 
   )
 }
-
-
 
 export default App;
