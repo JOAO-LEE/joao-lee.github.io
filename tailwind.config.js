@@ -3,6 +3,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
+      styled: ["Kumar One Outline", "serif", "system-ui"],
       titles: ["Raleway", "sans-serif", "system-ui"],
       tipography: ["Arimo", "sans-serif", "system-ui"],
     },
@@ -15,7 +16,7 @@ export default {
         },
         yel: {
           100: "#ffd60a",
-          200: "ffc300",
+          200: "#ffc300",
         },
         grayish: "#e5e5e5",
       },

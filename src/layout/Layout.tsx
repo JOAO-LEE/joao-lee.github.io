@@ -9,7 +9,7 @@ export function Layout() {
   return (
     <>
       <Header />
-      <main className={`main-content ${isMobileNavigationOpen ? "no-scrollbar" : ""}`}>
+      <main className={`main-content p-2 ${isMobileNavigationOpen ? "no-scrollbar" : ""}`}>
         <Outlet />
       </main>
     </>

@@ -1,11 +1,11 @@
-.about-container {
+/* .about-container {
   gap: 2rem;
   padding: .5rem;
   display: flex;
   flex-direction: column;
   background-color: #ddd;
   align-items: center;
-}
+} */
 
 .outer-heading {
   height: 50px;
@@ -18,8 +18,9 @@
   border: 0px solid #ddd;
   font-size: 45px;
   overflow: hidden;
-  height: 50px;
+  height: 55px;
   font-weight: lighter;
+  /* background-color: blue; */
 }
 
 .about-texts {
@@ -70,7 +71,7 @@
   }
   100% {
     color: var(--palOrange100);
-    top: -50px;
+    top: -40px;
     font-weight: 400;
     left: 0;
     opacity: 1;

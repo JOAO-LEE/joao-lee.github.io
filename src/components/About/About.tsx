@@ -13,7 +13,7 @@ function About() {
         <div 
         className="inner-heading" 
         >
-          <h2 className={`heading ${isVisible ? "animate-heading-up" : ""}`}>
+          <h2 className={`heading font-styled text-center ${isVisible ? "animate-heading-up" : ""}`}>
             &nbsp; <br />
             about
           </h2>
