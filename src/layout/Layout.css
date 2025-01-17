@@ -7,3 +7,7 @@
 .main-content::-webkit-scrollbar {
   display: none;
 }
+
+.no-scrollbar {
+  overflow: hidden;
+}

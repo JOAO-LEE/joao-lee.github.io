@@ -12,7 +12,7 @@
   --whitey: #f1f2f6;
   --orangeish: #ff8600;
   --clearOrangeish: #fb8500;
-
+  /* position: relative; */
   /* lakers color palette */
   --palOrange100: #ff9e00;
   --palOrange200: #ff9100;
@@ -39,7 +39,7 @@ body {
   scroll-behavior: smooth;
   color: white;
   position: relative;
-  background-color: black;
+  background-color: var(--palPurple300);
 }
 
 

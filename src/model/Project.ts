@@ -14,7 +14,7 @@ import { Dispatch } from "react"
 
 export type ProjectContext = {
   curr?: number,
-  setCurr: Dispatch<React.SetStateAction<number>>
-  previousSlide?: () => void
-  nextSlide?: () => void
+  // setCurr: Dispatch<React.SetStateAction<number>>
+  // previousSlide?: () => void
+  // nextSlide?: () => void
 }

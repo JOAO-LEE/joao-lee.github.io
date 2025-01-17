@@ -8,7 +8,7 @@ import Projects from "./pages/Project/Project";
 import { Navigate, Route, Routes } from "react-router";
 import { Home } from "./pages/Home/Home";
 import "./App.css";
-import { Layout } from "./components/layout/Layout";
+import { Layout } from "./layout/Layout";
 
 function App() {
   return (

@@ -1,55 +1,22 @@
-import { List, Sun, X } from "@phosphor-icons/react";
-import { useRef, useState } from "react";
+import { List, Sun } from "@phosphor-icons/react";
+import { useContext } from "react";
+import { MobileNavigation } from "../MobileNavigation/MobileNavigation";
+import { MobileNavigationContext } from "../../context/MobileNavigation/MobileNavigationContext";
 import "./Header.css";
 
 export function Header() {
-  const [open, setOpen] = useState<boolean>(false);
-  const menuRef = useRef<HTMLDivElement | null>(null);
-
-  const openCloseMenu = () => {
-    setOpen(prevState => !prevState);
-    if (menuRef.current) {
-      if (open) {
-        menuRef.current.classList.remove("open");
-        menuRef.current.classList.add("close");
-      } else {
-        menuRef.current.classList.remove("close");
-        menuRef.current.classList.add("open");
-      }
-    }
-  };
+  const {handleMobileNavigation} = useContext(MobileNavigationContext);
 
   return (
     <>
-      <div 
-      ref={menuRef} 
-      className={`menu ${open ? "open" : "close"} lg:hidden h-full backdrop-blur-lg text-white w-full sticky-header`}
-      >
-        <X 
-        className={`size-10 ${open ? "x-open" : "x-close"}`} 
-        onClick={openCloseMenu} 
-        />
-        <nav 
-        className="menu-navigation uppercase">
-          <li 
-          className={`nav-item ${open ? "nav-item-fade" : ""}`}
-          >
-            GitHub
-          </li>
-          <li 
-          className={`nav-item ${open ? "nav-item-fade" : ""}`}
-          >
-            Linkedin
-          </li>
-        </nav>
-      </div>
+      <MobileNavigation />      
       <header 
-      className="flex justify-between items-center p-4 fixed w-full top-0  backdrop-blur-md"
-      >
+      className="flex justify-between items-center p-4 sticky-header w-full top-0"
+      > 
         <List 
         size={32} 
         className="lg:hidden cursor-pointer hamb-menu" 
-        onClick={openCloseMenu} 
+        onClick={handleMobileNavigation} 
         />
         <nav className="navigation-links">
           <li className="nav-item glow-item">Home</li>
@@ -57,7 +24,7 @@ export function Header() {
           <li className="nav-item glow-item">Linkedin</li>
         </nav>
         <Sun 
-        className={`cursor-pointer hover:scale-110 duration-500 test-animation ${open && "static"} theme-switch`} 
+        className="cursor-pointer hover:scale-110 duration-500 test-animation theme-switch" 
         size={32} 
         />
       </header>

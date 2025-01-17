@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .sticky-header {
   padding: 1rem;
   position: sticky;
@@ -10,23 +9,57 @@
   background-color: var(--bgColor);
 }
 
-@layer utilities {
-  .nav-item {
-    @apply relative cursor-pointer duration-500
-  }
-
-  .nav-item:hover {
-    /* @apply text-pal-purple-300 scale-110 shadow-2xl shadow-pal-purple-300 */
-  }
-  
-  .nav-item::after {
-    /* @apply content-[''] bg-pal-purple-100 h-[3px] absolute w-[0%] left-0 -bottom-[5px] duration-[750ms] ease-in-out */
-  }
-
-  .nav-item:hover::after {
-    /* @apply w-[100%] bg-pal-orange-100 -translate-y-0.5 */
-  }
+.menu {
+  position: fixed;
+  padding: 1.5rem;
+  transition: left 750ms ease-in-out, width 1000ms ease-in-out, opacity 1000ms ease-in-out;
+  left: -100%;
+  width: 100%;
+  z-index: 30;
+  opacity: 0;
 }
+
+.menu.open {
+  left: 0;
+  opacity: 1;
+  /* width: 100%; */
+}
+
+.menu.close {
+  left: -100%;
+  opacity: 0;
+  /* width: 0; */
+}
+
+.menu-navigation {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 2rem;
+}
+
+
+/* @layer utilities { */
+  /* .nav-item { */
+    /* @apply relative cursor-pointer duration-500 */
+  /* } */
+
+  /* .nav-item:hover { */
+    /* @apply text-pal-purple-300 scale-110 shadow-2xl shadow-pal-purple-300 */
+  /* } */
+  
+  /* .nav-item::after { */
+    /* @apply content-[''] bg-pal-purple-100 h-[3px] absolute w-[0%] left-0 -bottom-[5px] duration-[750ms] ease-in-out */
+  /* } */
+
+  /* .nav-item:hover::after { */
+    /* @apply w-[100%] bg-pal-orange-100 -translate-y-0.5 */
+  /* } */
+/* } */
 
 .hamb-menu {
   opacity: 0;
@@ -44,37 +77,6 @@
     opacity: 1;
     transform: scale(1);
   }
-}
-
-.menu {
-  position: fixed;
-  padding: 1.5rem;
-  top: 0;
-  left: -20rem;
-  width: 0%;
-  z-index: 10;
-  transition: left 1000ms ease-in-out, width 1000ms ease-in;
-}
-
-.menu.open {
-  left: 0;
-  width: 100%;
-}
-
-.menu.close {
-  left: -20rem;
-  width: 0%;
-}
-
-.menu-navigation {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  font-size: 2rem;
 }
 
 .nav-item-fade {
