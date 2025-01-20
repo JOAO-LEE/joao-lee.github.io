@@ -1,0 +1,92 @@
+.menu {
+  interpolate-size: allow-keywords;
+  position: fixed;
+  padding: 1.5rem;
+  transition: left 0.75s ease-in, opacity 0.75s ease-out, background-color 1.5s ease-in-out;
+  left: -100%;
+  z-index: 30;
+  background-color: var(--blu100);
+  width: 100%
+}
+
+.menu.open {
+  left: 0;
+  background-color: var(--blu300);
+}
+
+.menu.close {
+  left: -100%;
+  background-color: var(--blu100);
+}
+
+.menu-navigation {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 2rem;
+}
+
+.nav-item-fade-in {
+  animation: blur-animation-in 3s ease forwards, switch-color-to-yel 1.5s ease 1.5s forwards;
+}
+
+.nav-item-fade-out {
+  animation: blur-animation-out 250ms ease forwards, switch-color-to-grayish 250ms ease forwards;
+}
+
+.x-open {
+  color: var(--blu100);
+  animation: x-spin-open 2.5s ease-in-out 500ms forwards;
+  opacity: 0;
+}
+
+.x-close {
+  animation: x-spin-close 2.5s ease-in-out forwards;
+}
+
+@keyframes x-spin-open {
+  from {
+    transform: rotate(0deg) scale(0.5);
+    opacity: 0.5;
+  }
+  to {
+    transform: rotate(180deg) scale(1);
+    opacity: 1;
+    color: var(--yel100)
+  }
+}
+
+@keyframes x-spin-close {
+  from {
+    transform: rotate(180deg) scale(1);
+    opacity: 1;
+    color: var(--grayish);
+  }
+  to {
+    transform: rotate(0deg) scale(0.5);
+    opacity: 0.5;
+  }
+}
+
+@keyframes blur-animation-in  {
+  from {
+    filter: blur(5px);
+  }
+  to {
+    filter: blur(0);
+  }
+}
+
+@keyframes blur-animation-out {
+  from {
+    filter: blur(0);
+  }
+  to {
+    filter: blur(5px);
+  }
+}
+

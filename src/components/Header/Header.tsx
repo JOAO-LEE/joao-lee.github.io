@@ -5,17 +5,17 @@ import { MobileNavigationContext } from "../../context/MobileNavigation/MobileNa
 import "./Header.css";
 
 export function Header() {
-  const {handleMobileNavigation} = useContext(MobileNavigationContext);
+  const { handleMobileNavigation } = useContext(MobileNavigationContext);
 
   return (
     <>
       <MobileNavigation />      
       <header 
-      className="flex justify-between items-center p-4 sticky-header w-full top-0"
+      className="flex justify-between items-center p-4 sticky-header w-full top-0 text-grayish z-0"
       > 
         <List 
         size={32} 
-        className="lg:hidden cursor-pointer hamb-menu" 
+        className="lg:hidden" 
         onClick={handleMobileNavigation} 
         />
         <nav className="navigation-links">

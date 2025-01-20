@@ -46,39 +46,6 @@
   animation: switch-color-to-yel 2s ease-in-out 3s forwards;
 }
 
-
-@keyframes switch-color-to-yel {
-  0% {
-    color: var(--grayish);
-  }
-  50% {
-    color: var(--grayish);
-  }
-  100% {
-    color: var(--yel200);
-  }
-}
-
-@keyframes switch-color-to-grayish {
-  0% {
-    color: var(--yel200);
-  }
-  50% {
-    color: var(--yel200);
-  }
-  100% {
-    color: var(--grayish);
-  }
-}
-
-@keyframes job-description-underline-shrink {
-  to {
-    width: 0;
-    opacity: 0;
-    background-color: var(--grayish);
-  }
-}
-
 @keyframes greeting-three-dee {
   0% {}
   50% {
@@ -88,5 +55,13 @@
     transform: none;
     filter: blur(0);
     opacity: 1;
+  }
+}
+
+@keyframes job-description-underline-shrink {
+  to {
+    width: 0;
+    opacity: 0;
+    background-color: var(--grayish);
   }
 }
