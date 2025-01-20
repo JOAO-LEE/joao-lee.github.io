@@ -59,6 +59,10 @@ section {
   scroll-snap-stop: always;
 } 
 
+section .section-title {
+  font-size: 2.25rem;
+}
+
 .hide {
   opacity: 0;
   filter: blur(.5rem);
@@ -74,6 +78,23 @@ section {
   transition: all 1.5s linear;
   transform-style: preserve-3d;
   transform-origin: bottom;
+}
+
+.outer-heading {
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inner-heading {
+  line-height: 50px;
+  overflow: hidden;
+  height: 50px;
+}
+
+.inner-heading p {
+  position: relative;
+  color: var(--grayish);
 }
 
 @keyframes switch-color-to-yel {
@@ -100,7 +121,6 @@ section {
   }
 }
 
-
 @keyframes general-fade-in {
   from { 
     opacity: 0
@@ -116,5 +136,19 @@ section {
   }
   to {
     opacity: 0;
+  }
+}
+
+@keyframes heading-up {
+  0% {
+    top: 0px;
+  }
+  50% {
+    color: var(--yel100);
+  }
+  100% {
+    color: var(--yel200);
+    top: -40px;
+    opacity: 1;
   }
 }

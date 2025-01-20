@@ -1,8 +1,8 @@
 import { useEffect, useState, useRef, MutableRefObject } from "react";
 
-const useIntersectionObserver = ({ threshold = 0.1 }): [MutableRefObject<HTMLElement | null>, boolean] => {
+const useIntersectionObserver = ({ threshold = 0.1 }): [MutableRefObject<HTMLDivElement  | null>, boolean] => {
   const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef<HTMLElement | null>(null);
+  const ref = useRef<HTMLDivElement  | null>(null);
 
   useEffect(() => {
     let observerRefValue = null;

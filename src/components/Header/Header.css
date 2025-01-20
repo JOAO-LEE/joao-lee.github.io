@@ -6,29 +6,9 @@
   padding: 1rem;
   position: sticky;
   top: 0px;
-  /* background-color: var(--bgColor); */
   z-index: 1;
-  color: var(--grayish)
+  color: var(--grayish);
 }
-
-
-/* @layer utilities { */
-  /* .nav-item { */
-    /* @apply relative cursor-pointer duration-500 */
-  /* } */
-
-  /* .nav-item:hover { */
-    /* @apply text-pal-purple-300 scale-110 shadow-2xl shadow-pal-purple-300 */
-  /* } */
-  
-  /* .nav-item::after { */
-    /* @apply content-[''] bg-pal-purple-100 h-[3px] absolute w-[0%] left-0 -bottom-[5px] duration-[750ms] ease-in-out */
-  /* } */
-
-  /* .nav-item:hover::after { */
-    /* @apply w-[100%] bg-pal-orange-100 -translate-y-0.5 */
-  /* } */
-/* } */
 
 .glow-item:hover {
   transition: all 600ms cubic-bezier(.09,.26,.24,.79);

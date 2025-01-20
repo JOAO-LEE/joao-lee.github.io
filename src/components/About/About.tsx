@@ -1,24 +1,13 @@
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import HeadingTitle from "../HeadingTitle/HeadingTitle";
 import "./About.css";
 
 function About() {
-  const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
-
   return (
     <section 
-    ref={ref} 
-    className="about-container bg-pal-purple-700 p-2"
+    className="about-container"
     >
-      <div className="outer-heading">
-        <div 
-        className="inner-heading" 
-        >
-          <h2 className={`heading font-styled text-center ${isVisible ? "animate-heading-up" : ""}`}>
-            &nbsp; <br />
-            about
-          </h2>
-        </div>
-      </div>
+      <HeadingTitle textContent="about" />
 
       {/* <div 
         className={`flex flex-col gap-20 lg:flex-row text-sm lg:w-2/3 h-full p-10 lg:items-center justify-center about-texts ${isVisible ? 'show' : 'hide'}`} 

@@ -1,10 +1,4 @@
-// import Main from "./components/Main/Main";
-// import Intro from "./components/Intro/Intro";
-import Projects from "./pages/Project/Project";
-// import About from "./components/About/About";
-// import { Header } from "./components/Header/Header";
-// import { ProjectProvider } from "./context/Project/ProjectProvider";
-// import { projects } from "./projects";
+import  {Project } from "./pages/Project/Project";
 import { Navigate, Route, Routes } from "react-router";
 import { Home } from "./pages/Home/Home";
 import { Layout } from "./layout/Layout";
@@ -14,13 +8,12 @@ function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route index path="/" element={<Home />} />
-        <Route  path="projects"  element={<Projects />}>
+        <Route path="projects">
           <Route element={<Navigate to="/" />} />
-          <Route index path=":id" element={<Projects />} />
+          <Route index path=":id" element={<Project />} />
         </Route>
       </Route>
     </Routes>
-
   )
 }
 

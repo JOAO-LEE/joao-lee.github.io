@@ -23,11 +23,11 @@ function Projects() {
   return (
     <section 
     ref={ref} 
-    className="bg-pal-purple-600 h-[200vh]">
+    className="bg-pal-purple-600 h-[200dvh]">
       <div className="flex flex-col h-full">
-        <div className="mx-auto">
-          <h2 className={`${isVisible ? "projects-title" : "text-transparent"} font-styled`}>projects</h2>
-        </div>
+        {/* <div className="mx-auto"> */}
+          <p className={`${isVisible ? "projects-title" : "text-transparent"} font-styled section-title text-center`}>projects</p>
+        {/* </div> */}
         <div 
         className="2xl:w-4/6 rounded-xl p-4 flex flex-col lg:flex-row gap-2 mx-auto"
         >

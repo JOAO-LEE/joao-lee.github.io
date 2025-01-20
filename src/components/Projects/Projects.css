@@ -1,19 +1,19 @@
 .projects-title {
-  position: relative; /* Adiciona contexto de empilhamento */
-  z-index: 20; /* Certifique-se que seja maior que o z-index do header */
+  position: relative;
+  z-index: 20;
   color: transparent;
-  
-  z-index: 1;
   display: inline-block;
   font-size: 45px;
   font-weight: lighter;
   animation: remove-blur-on-reveal 3s ease-in-out 250ms forwards;
   filter: blur(.25rem);
+  text-align: center;
+  /* width: fit-content; */
 }
 
 .projects-title::before {
   content: "";
-  width: 100%;
+  width: min-content;
   height: 60px;
   background-image: transparent;
   position: absolute;
