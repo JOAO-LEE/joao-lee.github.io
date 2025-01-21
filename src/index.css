@@ -38,7 +38,7 @@
 }
 
 body {
-  font-family: "Arimo", sans-serif;
+  font-family: "Raleway", sans-serif;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -54,13 +54,14 @@ body::-webkit-scrollbar {
 }
 
 section {
-  height: 100vh;
+  /* padding: ; */
+  height: 100svh;
   scroll-snap-align: start;
   scroll-snap-stop: always;
 } 
 
 section .section-title {
-  font-size: 2.25rem;
+  font-size: 1.875rem;
 }
 
 .hide {
@@ -89,66 +90,87 @@ section .section-title {
 .inner-heading {
   line-height: 50px;
   overflow: hidden;
-  height: 50px;
+  height: 55px;
 }
 
 .inner-heading p {
   position: relative;
+  top: 0;
   color: var(--grayish);
 }
 
-@keyframes switch-color-to-yel {
-  0% {
-    color: var(--grayish);
-  }
-  50% {
-    color: var(--grayish);
-  }
-  100% {
-    color: var(--yel200);
-  }
+.animate-heading-up {
+  animation: heading-up 1.75s ease-in-out forwards; 
 }
 
-@keyframes switch-color-to-grayish {
-  0% {
-    color: var(--yel200);
-  }
-  50% {
-    color: var(--yel200);
-  }
-  100% {
-    color: var(--grayish);
-  }
+.scroll-watcher {
+  height: 1px;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  background-color: var(--yel200);
+  width: 100%;
+  scale: 0 1;
+  animation: scroll-watcher-animation linear;
+  animation-timeline: scroll();
+  transform-origin: left;
 }
 
-@keyframes general-fade-in {
-  from { 
-    opacity: 0
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes switch-color-to-yel {
+    0% {
+      color: var(--grayish);
+    }
+    50% {
+      color: var(--grayish);
+    }
+    100% {
+      color: var(--yel200);
+    }
   }
-  to {
-    opacity: 1;
+  
+  @keyframes switch-color-to-grayish {
+    0% {
+      color: var(--yel200);
+    }
+    50% {
+      color: var(--yel200);
+    }
+    100% {
+      color: var(--grayish);
+    }
   }
-}
-
-@keyframes general-fade-out {
-  from { 
-    opacity: 1
+  
+  @keyframes general-fade-in {
+    from { 
+      opacity: 0
+    }
+    to {
+      opacity: 1;
+    }
   }
-  to {
-    opacity: 0;
+  
+  @keyframes general-fade-out {
+    from { 
+      opacity: 1
+    }
+    to {
+      opacity: 0;
+    }
   }
-}
-
-@keyframes heading-up {
-  0% {
-    top: 0px;
+  
+  @keyframes heading-up {
+    to {
+      color: var(--yel200);
+      top: -40px;
+    }
   }
-  50% {
-    color: var(--yel100);
+  
+  @keyframes scroll-watcher-animation {
+    to {
+      scale: 1 1;
+    }
   }
-  100% {
-    color: var(--yel200);
-    top: -40px;
-    opacity: 1;
-  }
+  
+  
 }

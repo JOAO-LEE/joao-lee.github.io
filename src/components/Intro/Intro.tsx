@@ -4,6 +4,7 @@ export function Intro() {
   return (
     <section 
     className="intro flex flex-col justify-center"
+    data-header-title="home"
     >
       <div 
       className="font-titles greeting-container space-y-1" 

@@ -7,10 +7,11 @@ import { projects } from "../../projects";
 import GithubIconLink from "./components/Github/GithubIconLink/GithubIconLink";
 import Project from "./components/Project/Project";
 import "./Projects.css";
+import HeadingTitle from "../HeadingTitle/HeadingTitle";
 
 function Projects() {
   const [githubStats, setGithubStats] = useState<GithubStatsModel>();
-  const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
+  const {ref} = useIntersectionObserver({ threshold: 0.1 });
   
   useEffect(() => {
     const fetchGithubStats = async () => {
@@ -22,34 +23,33 @@ function Projects() {
 
   return (
     <section 
-    ref={ref} 
-    className="bg-pal-purple-600 h-[200dvh]">
-      <div className="flex flex-col h-full">
-        {/* <div className="mx-auto"> */}
-          <p className={`${isVisible ? "projects-title" : "text-transparent"} font-styled section-title text-center`}>projects</p>
-        {/* </div> */}
-        <div 
-        className="2xl:w-4/6 rounded-xl p-4 flex flex-col lg:flex-row gap-2 mx-auto"
-        >
-          {
-            projects.map((project, index) => (
-              <Project
-              index={index} 
-              key={index} 
-              project={project}
-              />
-            ))
-          }
-        </div>
-        <GithubStats
+    className="h-[200dvh]"
+    data-header-title="projects"
+    ref={ref}
+    >
+      <HeadingTitle textContent="projects" /> 
+      <div 
+      className="2xl:w-4/6 rounded-xl p-4 flex flex-col lg:flex-row gap-2 justify-center"
+      >
+        {
+          projects.map((project, index) => (
+            <Project
+            index={index} 
+            key={index} 
+            project={project}
+            />
+          ))
+        }
+      </div>
+        {/* <GithubStats
         githubStats={githubStats!}
         isVisible={isVisible} 
         />
         <GithubIconLink 
         htmlUrl={githubStats?.html_url} 
         isVisible={isVisible}
-        />
-        </div>
+        /> */}
+        {/* </div> */}
     </section>
   )
 }

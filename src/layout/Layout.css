@@ -1,14 +1,13 @@
-.main-content {
+/* .main-content {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  height: 100dvh;
-}
+  height: 100svh;
+} */
 
 .main-content::-webkit-scrollbar {
   display: none;
 }
-
+/* 
 .no-scrollbar {
   overflow: hidden;
-}
-
+} */
