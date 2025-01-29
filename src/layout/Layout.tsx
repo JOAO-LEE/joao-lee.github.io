@@ -10,7 +10,7 @@ export function Layout() {
     <>
       <div className='scroll-watcher'></div>
       <Header />
-      <main className={`main-content p-2 ${!!isMobileNavigationOpen && "no-scrollbar"}`}>
+      <main className={`main-content ${!!isMobileNavigationOpen && "no-scrollbar"}`}>
         <Outlet />
       </main>
     </>

@@ -4,6 +4,7 @@ export default {
   theme: {
     fontFamily: {
       styled: ["Kumar One Outline", "serif", "system-ui"],
+      "styled-bold": ["Kumar One", "serif", "system-ui"],
       titles: ["Raleway", "sans-serif", "system-ui"],
       tipography: ["Arimo", "sans-serif", "system-ui"],
     },
@@ -13,6 +14,7 @@ export default {
           100: "#003566",
           200: "#001d3d",
           300: "#000814",
+          400: "#003f88",
         },
         yel: {
           100: "#ffd60a",

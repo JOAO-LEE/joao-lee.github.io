@@ -12,12 +12,12 @@ export default function HeadingTitle({ textContent }: { textContent: string }) {
       <div 
       className="inner-heading" 
       >
-        <p 
+        <h2 
         className={`heading font-styled text-center section-title ${isVisible && "animate-heading-up"}`}
         >
           &nbsp; <br />
           {textContent}
-        </p>
+        </h2>
     </div>
   </div>
   )

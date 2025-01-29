@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Kumar+One+Outline&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Kumar+One&family=Kumar+One+Outline&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -38,7 +38,7 @@
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif, system-ui;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -54,31 +54,39 @@ body::-webkit-scrollbar {
 }
 
 section {
-  /* padding: ; */
-  height: 100svh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  min-height: 100svh;
+  /* scroll-snap-align: start;
+  scroll-snap-stop: always; */
 } 
 
 section .section-title {
   font-size: 1.875rem;
 }
 
-.hide {
+.hidden-content {
   opacity: 0;
-  filter: blur(.5rem);
-  transition: all 1s linear;
-  visibility: hidden;
-  transform-style: preserve-3d;
-  transform-origin: bottom;
+  filter: blur(4px);
 }
 
-.show {
-  visibility: visible;
+.show-content {
   opacity: 1;
-  transition: all 1.5s linear;
-  transform-style: preserve-3d;
-  transform-origin: bottom;
+  filter: blur(0);
+  transition: opacity 1.5s ease-in-out, filter 1.5s ease-in-out, transform 1.75s ease
+}
+
+.title {
+  color: var(--grayish);
+  animation: switch-color-to-yel 0.75s ease-in-out 1.75s forwards;
+}
+
+.about-article {
+  animation: switch-color-to-grayish 1.5s ease-in-out 1.75s forwards;
+  color: var(--yel200);
+}
+
+.about-article b {
+  color: var(--grayish);
+  animation: switch-color-to-yel 1.5s ease-in-out 1.75s forwards;
 }
 
 .outer-heading {
@@ -93,14 +101,27 @@ section .section-title {
   height: 55px;
 }
 
-.inner-heading p {
+.inner-heading h2 {
   position: relative;
   top: 0;
   color: var(--grayish);
+  letter-spacing: .5rem
 }
 
 .animate-heading-up {
-  animation: heading-up 1.75s ease-in-out forwards; 
+  animation: heading-up 1.75s ease-in-out forwards, reduce-letter-spacing 2s ease-in-out forwards; 
+}
+
+.hidden-left-x {
+  transform: translateX(-100%);
+}
+
+.hidden-right-x {
+  transform: translateX(100%);
+}
+
+.swipe-origin-x {
+  transform: translateX(0);
 }
 
 .scroll-watcher {
@@ -162,7 +183,7 @@ section .section-title {
   @keyframes heading-up {
     to {
       color: var(--yel200);
-      top: -40px;
+      top: -50px;
     }
   }
   
@@ -171,6 +192,10 @@ section .section-title {
       scale: 1 1;
     }
   }
-  
-  
+
+  @keyframes reduce-letter-spacing {
+    to {
+      letter-spacing: normal
+    }
+  }
 }

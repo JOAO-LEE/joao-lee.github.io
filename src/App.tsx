@@ -2,6 +2,7 @@ import  {Project } from "./pages/Project/Project";
 import { Navigate, Route, Routes } from "react-router";
 import { Home } from "./pages/Home/Home";
 import { Layout } from "./layout/Layout";
+import "./index.css";
 
 function App() {
   return (

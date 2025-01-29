@@ -1,10 +1,10 @@
 import { useEffect, useState, useRef, MutableRefObject } from "react";
 
-type TIntersectionObserver = {ref: MutableRefObject<HTMLDivElement  | null>, isVisible: boolean, headerTitle?: string | null};  
+type TIntersectionObserver<T extends HTMLElement> = {ref: MutableRefObject<T | null>, isVisible: boolean, headerTitle?: string | null};  
 
-const useIntersectionObserver = ({ threshold = 0.1 }): TIntersectionObserver => {
+const useIntersectionObserver = <T extends HTMLElement>({ threshold = 0.1 }): TIntersectionObserver<T> => {
   const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef<HTMLDivElement  | null>(null);
+  const ref = useRef<T | null>(null);
 
   useEffect(() => {
     let observerRefValue = null;
