@@ -1,7 +1,7 @@
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import HeadingTitle from "../HeadingTitle/HeadingTitle";
 import { TechStackItem } from "../TechStackItem/TechStackItem";
-import "./Experience.css";
+import "./TechStack.css";
 
 
 
@@ -32,7 +32,7 @@ const techStack = {
 }
 
 
-export default function TechStack() {
+export function TechStack() {
   const { ref, isVisible } = useIntersectionObserver({ threshold: 0.5 });
   return (
     <section 
@@ -90,9 +90,7 @@ export default function TechStack() {
 //         {/* <div className={`about-text ${isVisible ? "show-content": "hide-content"}`}>
 //           <p className="font-styled text-yel-200 tracking-widest text-xl">and what's next...</p>
 //           <article className={`${isVisible && "about-article"} text-justify text-xs `}> 
-//             <p>
-//               I am looking for an opportunity to put into practice the knowledge I acquire everyday and have acquired so far, contributing analytically to the development of new solutions.
-//             </p>
+//             
 //           </article>
 //         </div>   */}
 
