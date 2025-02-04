@@ -1,16 +1,17 @@
 import { useState, useRef, ReactNode } from "react";
 
-function AnimatedButton({ icon, title, link }: { icon: ReactNode, title: string, link: string }) {
+function AnimatedButton({ icon, title, link }: { icon: ReactNode, title: string, link?: string }) {
   const [hovered, setHovered] = useState<boolean>(false);
   const buttonRef = useRef<HTMLSpanElement>(null);
+  
   return (
     <a
     onMouseEnter={() => setHovered(true)}
     onMouseLeave={() => setHovered(false)} 
     href={link}
     target="_blank" 
-    className="p-1 flex items-center rounded-lg text-grayish bg-pal-orange-100 group">
-      <div className="flex items-center gap-2 2xl:block text-3xl">
+    className={`px-2 py-0.5 flex items-center text-blu-100 bg-yel-100 group ${!link ? "pointer-events-none" : ""}`}>
+      <div className={`flex items-center gap-2 2xl:block text-3xl`}>
         {icon}
         <span className="text-xs xl:hidden">{title}</span>
       </div>
@@ -19,11 +20,11 @@ function AnimatedButton({ icon, title, link }: { icon: ReactNode, title: string,
       className="overflow-x-hidden transition-all duration-300 ease-out">
         <span 
         ref={buttonRef} 
-        className="hidden xl:inline px-1.5 ">
+        className="hidden text-nowrap xl:inline px-1.5">
           {title}
         </span>
       </div>
-    </a>
+    </a> 
   )
 }
 

@@ -1,4 +1,27 @@
-.projects-title {
+.project-dialog {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s; 
+} 
+
+.project-dialog[open] {
+  animation: fade-in-modal 1s ease forwards;
+  pointer-events: inherit;
+}
+
+@keyframes fade-in-modal{
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+/* dialog[open] {
+  opacity: 1;
+  pointer-events: inherit;
+} */
+/* .projects-title {
   position: relative;
   z-index: 20;
   color: transparent;
@@ -8,7 +31,7 @@
   animation: remove-blur-on-reveal 3s ease-in-out 250ms forwards;
   filter: blur(.25rem);
   text-align: center;
-  /* width: fit-content; */
+
 }
 
 .projects-title::before {
@@ -163,4 +186,4 @@
     background-color: transparent;
   }
 }
-
+ */

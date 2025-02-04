@@ -1,20 +1,22 @@
-import { Dispatch } from "react"
+import { TechStackItem } from "./TechStackItem";
 
-
- export type Project = {
-  id: number,
-  name: string,
-  githubRepository: string,
-  description: string,
-  image: string,
-  deployed: boolean,
+export type Project = {
+  id: number
+  name: string
+  githubRepository: string
+  description: string
+  coverImage: string
+  deployed: boolean
   applicationUrl: string
-  techStack: Array<string>
+  techStackList: Array<TechStackItem>
+  images: Array<string>
+  
 }
 
 export type ProjectContext = {
-  curr?: number,
-  // setCurr: Dispatch<React.SetStateAction<number>>
-  // previousSlide?: () => void
-  // nextSlide?: () => void
+  selectProject: (project: Project | null) => void
+  selectedProject: Project | null
+  previousSlide: () => void
+  nextSlide: () => void
+  curr: number
 }

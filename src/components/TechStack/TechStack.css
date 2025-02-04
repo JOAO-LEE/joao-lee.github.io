@@ -1,15 +1,3 @@
-.hidden-down {
-  transform: translateY(100px);
-}
-
-.hidden-up {
-  transform: translateY(-50px);
-}
-
-/* .show-up, .show-down {
-  transform: translateY(0);
-} */
-
 .hidden-right-stack {
   transform: translateX(100%);
 }

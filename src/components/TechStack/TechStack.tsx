@@ -1,60 +1,44 @@
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import { Link } from "react-router";
+import { techStack } from "../../data/techStack";
 import HeadingTitle from "../HeadingTitle/HeadingTitle";
-import { TechStackItem } from "../TechStackItem/TechStackItem";
-import "./TechStack.css";
-
-
-
-const techStack = {
-  frontendTech: [
-    { name: "React", iconClass: "devicon-react-original" },
-    { name: "Next.Js", iconClass: "devicon-nextjs-plain" },
-    { name: "Angular", iconClass: "devicon-angular-plain" },
-    { name: "HTML5", iconClass: "devicon-html5-plain" },
-    { name: "CSS3", iconClass: "devicon-css3-plain" },
-    { name: "JavaScript", iconClass: "devicon-javascript-plain" },
-    { name: "TypeScript", iconClass: "devicon-typescript-plain" },
-    { name: "TailwindCSS", iconClass: "devicon-tailwindcss-original" },
-    { name: "Bootstrap", iconClass: "devicon-bootstrap-plain" },
-    { name: "Sass", iconClass: "devicon-sass-original" },
-    { name: "Redux", iconClass: "devicon-redux-original"}
-  ],
-  backendTech: [
-    { name: "Node.js", iconClass: "devicon-nodejs-plain" },
-    { name: "Express.js", iconClass: "devicon-express-original" },
-    { name: "C#", iconClass: "devicon-csharp-plain" },
-    { name: ".NET Core", iconClass: "devicon-dotnetcore-plain" },
-    { name: "Sequelize", iconClass: "devicon-sequelize-plain" },
-    { name: "MySQL", iconClass: "devicon-mysql-original" },
-    { name: "PostgreSQL", iconClass: "devicon-postgresql-plain" },
-    { name: "Python", iconClass: "devicon-python-plain" },
-  ]
-}
-
+import TechStackHeading from "./components/TechStackHeading/TechStackHeading";
+import TechStackItem from "./components/TechStackItem/TechStackItem";
+import TechStackSideBySideContainer from "./components/TechStackItem/TechStackSideBySide";
+import TechStackList from "./components/TechStackList/TechStackList";
 
 export function TechStack() {
-  const { ref, isVisible } = useIntersectionObserver({ threshold: 0.5 });
+
   return (
-    <section 
-    ref={ref} 
-    className="bg-blu-400 p-4 overflow-hidden"
+    <section  
+    className="bg-blu-200 p-4 overflow-hidden"
     >
-         <HeadingTitle textContent="tech stack"/>
-          <div>
-            <h4 className="font-styled tracking-widest text-2xl title">Frontend</h4>
-            <ul className="grid grid-cols-2 justify-items-center  gap-4 text-center overflow-hidden">
-              {
-                techStack.frontendTech
-                  .map((feTech, index) => (
-                    <TechStackItem 
-                    key={index} 
-                    index={index}
-                    {...feTech} 
-                    />
-                ))
-              }
-            </ul> 
+      <HeadingTitle textContent="tech stack"/>
+      <div className="flex flex-col gap-7">
+        <TechStackHeading techStackTitle="basics"/>
+        <TechStackSideBySideContainer techSection="basics"/>
+        <TechStackHeading techStackTitle="frameworks"/>
+        <TechStackList 
+        itemsDirection="vertical"
+        >
+          {
+            techStack
+            .frontendTech 
+              .map(({iconClass, name}, index) => (
+                <TechStackItem  
+                key={index} 
+                iconClass={iconClass} 
+                name={name}
+                />
+              ))
+          }
+        </TechStackList>
+        <TechStackHeading techStackTitle="styling"/>
+        <TechStackSideBySideContainer techSection="styling"/>
+        <TechStackHeading techStackTitle="and much more..." />
+        <div>
+          <p className="text-sm text-center">click <Link to="/tech-stack"><b>here</b></Link> to see all or continue to see my projects below</p>
         </div>
+      </div>
     </section>
   )
 }

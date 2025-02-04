@@ -124,6 +124,10 @@ section .section-title {
   transform: translateX(0);
 }
 
+.swipe-origin-y {
+  transform: translateY(0);
+}
+
 .scroll-watcher {
   height: 1px;
   position: fixed;
@@ -137,7 +141,11 @@ section .section-title {
   transform-origin: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* dialog::backdrop {
+  background-color: blue;
+} */
+
+/* @media (prefers-reduced-motion: no-preference) { */
   @keyframes switch-color-to-yel {
     0% {
       color: var(--grayish);
@@ -161,16 +169,7 @@ section .section-title {
       color: var(--grayish);
     }
   }
-  
-  @keyframes general-fade-in {
-    from { 
-      opacity: 0
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
+    
   @keyframes general-fade-out {
     from { 
       opacity: 1
@@ -198,4 +197,4 @@ section .section-title {
       letter-spacing: normal
     }
   }
-}
+/* } */

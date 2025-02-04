@@ -1,0 +1,7 @@
+.hidden-stack:nth-child(odd) {
+  transform: translateY(50px);
+}
+
+.hidden-stack:nth-child(even) {
+  transform: translateY(-50px);
+}

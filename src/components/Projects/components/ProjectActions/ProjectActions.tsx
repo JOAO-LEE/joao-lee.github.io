@@ -1,7 +1,7 @@
-import { AppWindow, BracketsCurly } from "@phosphor-icons/react";
+import { AppWindow, BracketsCurly, Warning } from "@phosphor-icons/react";
 import AnimatedButton from "../AnimatedButton/AnimatedButton";
 
-function ProjectActions({applicationUrl, githubRepository}: { applicationUrl: string, githubRepository: string }) {
+function ProjectActions({ applicationUrl, githubRepository, deployed }: { applicationUrl: string, githubRepository: string, deployed: boolean }) {
   
   return (
     <div className="space-y-2">
@@ -9,12 +9,18 @@ function ProjectActions({applicationUrl, githubRepository}: { applicationUrl: st
       className="flex gap-2"
       >
         <AnimatedButton
-        link={applicationUrl} 
-        title="app" 
+        link={deployed ? applicationUrl : ""} 
+        title={deployed ? "app" : "app in development"}
         icon={
-          <AppWindow 
-          className="size-5 xl:size-max" 
-          />
+          deployed 
+          ? 
+            <AppWindow 
+            className="size-5 xl:size-max" 
+            />
+          :
+            <Warning
+            className="size-5 xl:size-max" 
+            />
         }
         />
         <AnimatedButton

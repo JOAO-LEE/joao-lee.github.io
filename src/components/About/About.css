@@ -1,16 +1,25 @@
-.about-texts-container {
-  width: 80%;
+.arrow-shown {
+  animation: bounce 1s ease 6s infinite alternate, switch-color-to-yel 1s ease  6s infinite alternate;
+ -webkit-animation: bounce 1s ease 6s infinite alternate, switch-color-to-yel 1s ease 6s  infinite alternate;
 }
 
-.hidden-left {
-  transform: translateX(-100%);
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    
+    transform: translateY(-15px);
+
+  }
 }
 
-.about-text.show-content.show-right:nth-child(2) {
-  transition-delay: 400ms;
-}
-
-.about-text.show-content.show-right:nth-child(3) {
-  transition-delay: 600ms;
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
 }
 

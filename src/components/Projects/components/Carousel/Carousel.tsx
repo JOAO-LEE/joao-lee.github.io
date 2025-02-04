@@ -1,20 +1,16 @@
 import { CaretLeft, CaretRight } from "@phosphor-icons/react";
 import { ReactNode, useContext } from "react";
-// import useIntersectionObserver from "../../../../hooks/useIntersectionObserver";
 import { ProjectContext } from "../../../../context/Project/ProjectContext";
 import "./Carousel.css";
 
-function Carousel({ children }: { children: ReactNode[] }) {
-  // const [ref] = useIntersectionObserver({ threshold: 0.5 });
-  const { curr = 0, setCurr, previousSlide, nextSlide } = useContext(ProjectContext);
+function Carousel({ children }: { children: ReactNode }) {
+  const { curr = 0, previousSlide, nextSlide } = useContext(ProjectContext);
 
   return (
     <div 
-    // ref={ref} 
-    className=""
     >
       <div 
-      className={`overflow-hidden relative size-36 md:size-[32rem]`}
+      className={`overflow-hidden relative md:size-[32rem]`}
       >
         <div
         className="flex transition-transform ease-in-out duration-500" 
@@ -50,7 +46,7 @@ function Carousel({ children }: { children: ReactNode[] }) {
           <div 
           className="flex items-center justify-center gap-2"
           >
-            {
+            {/* {
               children.map((_, i) => (
                 <div 
                 key={i}
@@ -58,7 +54,7 @@ function Carousel({ children }: { children: ReactNode[] }) {
                 className={`carousel-spy cursor-pointer ${curr === i ? "p-1.5 md:p-2 border-pal-orange-100" : "bg-opacity-50 border-pal-purple-300 hover:bg-pal-purple-300"}`} 
                 />
               ))
-            }
+            } */}
           </div>
         </div>
       </div>

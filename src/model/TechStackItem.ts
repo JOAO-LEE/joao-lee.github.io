@@ -1,0 +1,1 @@
+export type TechStackItem = { iconClass: string, name: string }
