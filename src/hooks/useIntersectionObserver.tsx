@@ -2,7 +2,7 @@ import { useEffect, useState, useRef, MutableRefObject } from "react";
 
 type TIntersectionObserver<T extends HTMLElement> = {ref: MutableRefObject<T | null>, isVisible: boolean, headerTitle?: string | null};  
 
-const useIntersectionObserver = <T extends HTMLElement>({ threshold = 0.1 }): TIntersectionObserver<T> => {
+export const useIntersectionObserver = <T extends HTMLElement>({ threshold = 0.1 }): TIntersectionObserver<T> => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<T | null>(null);
 
@@ -31,5 +31,3 @@ const useIntersectionObserver = <T extends HTMLElement>({ threshold = 0.1 }): TI
   
   return {ref, isVisible};
 };
-
-export default useIntersectionObserver;
