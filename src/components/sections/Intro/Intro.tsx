@@ -3,17 +3,19 @@ import "./Intro.css";
 export function Intro() {
   return (
     <section 
-    className="intro flex flex-col justify-center"
+    className="intro flex flex-col justify-center px-8 py-4"
     data-header-title="home"
     >
       <div 
       className="font-titles greeting-container space-y-1" 
       >
-        <h1>João Lima</h1>
+        <h1 className="lg:text-6xl lg:mb-6">João Lima<span className="colored-dot-texts">.</span>
+          {/* <DotOutline size={32} className="inline mt-5"/> */}
+        </h1>
         <h2
-        className="uppercase font-styled font-bold text-xl">Full Stack Web Developer</h2>
-        <h3 className="text-xl">based in Brazil</h3>
-        <p className="text-justify">Passionate for learning modern technologies and creating clean applications with</p>
+        className="uppercase font-styled font-bold text-xl lg:text-5xl">Full Stack Web Developer<span className="font-styled-bold colored-dot-job-description">.</span></h2>
+        <h3 className="text-xl lg:text-6xl">Based in Brazil<span className="colored-dot-texts">.</span></h3>
+        <p className="text-justify text-2xl">Passionate about learning modern technologies & building impactful, clean applications with.</p>
       </div>
     </section> 
   )

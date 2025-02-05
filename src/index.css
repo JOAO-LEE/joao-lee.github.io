@@ -149,16 +149,16 @@ section .section-title {
     color: var(--grayish);
   }
   100% {
-    color: var(--yel200);
+    color: var(--yel100);
   }
 }
 
 @keyframes switch-color-to-grayish {
   0% {
-    color: var(--yel200);
+    color: var(--yel100);
   }
   50% {
-    color: var(--yel200);
+    color: var(--yel100);
   }
   100% {
     color: var(--grayish);
