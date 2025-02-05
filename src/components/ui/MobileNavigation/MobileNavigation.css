@@ -31,7 +31,7 @@
 }
 
 .nav-item-fade-in {
-  animation: blur-animation-in 3s ease forwards, switch-color-to-yel 1.5s ease 1.5s forwards;
+  animation: blur-animation-in 5s ease forwards, switch-color-to-yel 1.5s ease 1.5s forwards;
 }
 
 .nav-item-fade-out {
@@ -46,6 +46,30 @@
 
 .x-close {
   animation: x-spin-close 2.5s ease-in-out forwards;
+}
+
+.link-title {
+  position: relative;
+  color: var(--grayish);
+  
+  animation: switch-color-to-yel 1s ease-in-out 500ms forwards
+}
+
+.link-title::before {
+  content: attr(data-title);
+  font-family: "Kumar One Outline";
+  position: absolute;
+  left: 0;
+  animation: shadow-move 1s ease-in-out 2s forwards
+}
+
+
+@keyframes shadow-move {
+  to {
+    opacity: 0.6;
+    left: -0.24rem;
+    color: var(--grayish)
+  }
 }
 
 @keyframes x-spin-open {

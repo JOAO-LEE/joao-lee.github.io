@@ -5,6 +5,7 @@ import { Eye, X } from '@phosphor-icons/react'
 import { Link } from 'react-router'
 
 export function DialogProject({ dialogRef, selectedProject }: { dialogRef: RefObject<HTMLDialogElement>, selectedProject: Project | null }) {
+
   return (
     <dialog 
     ref={dialogRef} 
@@ -17,20 +18,13 @@ export function DialogProject({ dialogRef, selectedProject }: { dialogRef: RefOb
         onClick={() => dialogRef.current?.close()} 
         />
       </div>
-      <div className="flex justify-end">
-        <ProjectActions
-        deployed={selectedProject?.deployed ?? false} 
-        applicationUrl={selectedProject?.applicationUrl ?? ""} 
-        githubRepository={selectedProject?.githubRepository ?? ""} 
-        /> 
-      </div>
       <img src={selectedProject?.coverImage} alt="" />
       <article className="text-xs">
         <p className="font-styled-bold text-lg text-yel-100">About</p>
         <p className="text-justify text-grayish">{selectedProject?.description}</p>
       </article>
       <ul 
-      className="flex gap-1 justify-between lowercase text-xs space-x-2.5"
+      className="flex lowercase text-xs gap-2 justify-between flex-wrap"
       >
         {
           selectedProject?.techStackList
@@ -45,7 +39,12 @@ export function DialogProject({ dialogRef, selectedProject }: { dialogRef: RefOb
           ))
         }
       </ul>
-      <div className='flex justify-end'>
+      <div className='flex justify-between items-center mt-4'>
+        <ProjectActions
+        deployed={selectedProject?.deployed ?? false} 
+        applicationUrl={selectedProject?.applicationUrl ?? ""} 
+        githubRepository={selectedProject?.githubRepository ?? ""} 
+        />
         <Link to={`/projects/${selectedProject?.id}`} className="flex items-center gap-2 border border-yel-100 p-1 text-xs text-yel-100">
           <Eye className='text-sm' />
           <span>see more</span>

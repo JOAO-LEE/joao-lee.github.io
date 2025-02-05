@@ -24,11 +24,10 @@ export function TechStack() {
             techStack
             .frontendTech 
               .map(({iconClass, name}, index) => (
-                <TechItem  
-                key={index} 
-                iconClass={iconClass} 
-                name={name}
-                />
+                <TechItem key={index}>
+                  <i className={`${iconClass} text-7xl p-4`}></i>
+                  <p className="font-styled-tipography  text-yel-200 text-2xl">{name}</p>
+                </TechItem>
               ))
           }
         </TechList>

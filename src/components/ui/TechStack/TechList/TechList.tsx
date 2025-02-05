@@ -5,7 +5,7 @@ export function TechList({ children, itemsDirection }: { children: ReactNode, it
   
   return (
     <ul  
-    className={`flex ${itemsDirection === "horizontal" ? "items-center justify-between" : "flex-col gap-4"}`}
+    className={`flex ${itemsDirection === "horizontal" ? "items-center justify-between" : "flex-col gap-10"}`}
     >
       {children}
     </ul>

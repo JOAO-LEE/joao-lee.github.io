@@ -1,9 +1,10 @@
 import NotFound from "@/components/ui/NotFound/NotFound";
 import { useParams } from "react-router";
 import { Project } from "@/model/Project";
-import "./ProjectPage.css"
 import { useEffect, useState } from "react";
 import { projects } from "@/data/projects";
+import "./ProjectPage.css";
+import ImageSlider from "@/components/ui/ImageSlider/ImageSlider";
 
 export function ProjectPage() {
 const [project, setProject] = useState<Project | null>(null);
@@ -28,30 +29,23 @@ useEffect(() => {
           )
         : 
           (
-            <section className="p-4 space-y-5">
+            <section className="p-4 space-y-5 overflow-hidden">
               <div className="relative text-4xl">
-                {/* <span className="font-styled tracking-widest text-yel-200 project-title-shadow">{project?.name}</span> */}
                 <h1 className="font-styled-bold tracking-widest project-title" data-title={project.name}>{project?.name}</h1>
               </div>
-              <article className="text-xs">
-                <h2 className="text-yel-100 tracking-widest font-styled text-3xl">About</h2>
+              <article className="about-project text-xs">
+                <h2 className="text-yel-100 tracking-widest font-styled text-xl">About</h2>
                 <p className="text-justify">{project?.description}</p>
               </article>
-              <ul className="space-y-4">
+              <ul className="space-y-5">
                 {
                   project?.images.map((image, index) => (
-                    <li 
-                    key={index}
-                    >
-                      <img 
-                      src={image} 
-                      alt=""
-                      className="object-contain w-full" 
-                      />
-                    </li>
+                    <ImageSlider imageSource={image} key={index}/>
+               
                   ))
                 }
               </ul>
+              
             </section>
           )
       }

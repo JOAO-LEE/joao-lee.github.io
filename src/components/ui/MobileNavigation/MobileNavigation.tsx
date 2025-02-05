@@ -1,10 +1,18 @@
 import { X } from "@phosphor-icons/react";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { MobileNavigationContext } from "../../../context/MobileNavigation/MobileNavigationContext";
 import "./MobileNavigation.css";
+import { Link, useLocation } from "react-router";
 
 export function MobileNavigation() {
   const { handleMobileNavigation, isMobileNavigationOpen } = useContext(MobileNavigationContext);
+  // const location = useLocation();
+
+  // useEffect(() => {
+  //   handleMobileNavigation();
+  // },[location])
+
+
   
   return (
     <div 
@@ -15,16 +23,30 @@ export function MobileNavigation() {
       onClick={handleMobileNavigation} 
       />
       <nav 
-      className="menu-navigation uppercase font-styled">
-        <li 
-        className={`nav-item ${isMobileNavigationOpen ? "nav-item-fade-in" : "nav-item-fade-out"}`}
+      className="menu-navigation uppercase font-styled-bold tracking-widest">
+        <li
+        data-title="Home"
+        className={`nav-item ${isMobileNavigationOpen ? "nav-item-fade-in link-title" : "nav-item-fade-out"}`}
         >
-          GitHub
+          <Link to="/">
+            Home
+          </Link>
         </li>
-        <li 
-        className={`nav-item ${isMobileNavigationOpen ? "nav-item-fade-in" : "nav-item-fade-out"}`}
+        <li
+        data-title="Github" 
+        className={`nav-item ${isMobileNavigationOpen ? "nav-item-fade-in link-title" : "nav-item-fade-out"}`}
         >
-          Linkedin
+          <a href="https://github.com/JOAO-LEE">
+           Github
+          </a>
+        </li>
+        <li
+        data-title="LinkedIn" 
+        className={`nav-item  ${isMobileNavigationOpen ? "nav-item-fade-in link-title" : "nav-item-fade-out"}`}
+        >
+          <a href="https://www.linkedin.com/in/joao-lee-lima/">
+            LinkedIn
+          </a>
         </li>
       </nav>
     </div>
