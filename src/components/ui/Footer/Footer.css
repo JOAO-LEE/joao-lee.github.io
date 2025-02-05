@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .inner-content-footer {
+    @apply px-[15vw] pt-20 pb-20 flex flex-col gap-7;
+  }
+    
+  .footer-link-list-container {
+    @apply flex flex-col gap-3;
+  }
+
+  .footer-link-list-item {
+    @apply flex items-center gap-2 text-grayish;
+  }
+
+  .footer-list-title {
+    @apply font-styled-bold text-yel-200;
+  }
+
+}
+
+
+

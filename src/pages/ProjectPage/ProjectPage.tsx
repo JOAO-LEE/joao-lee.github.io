@@ -11,7 +11,7 @@ import ProjectActions from "@/components/ui/Projects/ProjectActions/ProjectActio
 export function ProjectPage() {
 const [project, setProject] = useState<Project | null>(null);
 const params = useParams();
-const navigate = useNavigate()
+const navigate = useNavigate();
 
 useEffect(() => {
   const selectedProject = projects.find(proj => proj.id === Number(params?.id));

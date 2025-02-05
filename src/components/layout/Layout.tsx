@@ -3,6 +3,7 @@ import { Outlet } from 'react-router'
 import { MobileNavigationContext } from "@/context/MobileNavigation/MobileNavigationContext";
 import { useContext } from 'react';
 import "./Layout.css";
+import Footer from "../ui/Footer/Footer";
 
 export function Layout() {
   const { isMobileNavigationOpen } = useContext(MobileNavigationContext);
@@ -14,6 +15,7 @@ export function Layout() {
       <main className={`main-content ${!!isMobileNavigationOpen && "no-scrollbar"}`}>
         <Outlet />
       </main>
+      <Footer />
     </>
   )
 }

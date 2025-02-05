@@ -9,7 +9,7 @@
 
 .project-title::before {
   content: attr(data-title);
-  font-family: "Kumar One Outline";;
+  font-family: "Kumar One Outline";
   position: absolute;
   left: 0;
   animation: shadow-move 1s ease-in-out 500ms forwards
