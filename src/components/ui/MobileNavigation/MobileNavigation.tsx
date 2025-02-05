@@ -1,19 +1,12 @@
 import { X } from "@phosphor-icons/react";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { MobileNavigationContext } from "../../../context/MobileNavigation/MobileNavigationContext";
+import { Link } from "react-router";
 import "./MobileNavigation.css";
-import { Link, useLocation } from "react-router";
 
 export function MobileNavigation() {
   const { handleMobileNavigation, isMobileNavigationOpen } = useContext(MobileNavigationContext);
-  // const location = useLocation();
 
-  // useEffect(() => {
-  //   handleMobileNavigation();
-  // },[location])
-
-
-  
   return (
     <div 
     className={`menu ${isMobileNavigationOpen ? "open" : "close"} h-full`}

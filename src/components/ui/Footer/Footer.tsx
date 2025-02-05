@@ -4,7 +4,7 @@ import "./Footer.css";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 export default function Footer() {
-  const {ref, isVisible} = useIntersectionObserver({threshold: 0.5})
+  const {ref, isVisible} = useIntersectionObserver({threshold: 0.5});
 
   return (
     <footer ref={ref} className="bg-blu-200 font-tipography">
@@ -77,8 +77,7 @@ export default function Footer() {
         <div className="mb-14 space-y-1">
           <span 
           className={`font-styled-bold ${isVisible ? "list-title-shadow" : ""}`}
-          data-title="Socials" 
-
+          data-title="Socials"
           >
             Socials
           </span>

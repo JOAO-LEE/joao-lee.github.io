@@ -14,53 +14,49 @@
   transition: all 600ms cubic-bezier(.09,.26,.24,.79);
 }
 
-.navigation-links {
+.navigation-links-container {
   visibility: hidden;
   display: none;
 }
 
 @media (min-width: 1024px) {
-  .navigation-links {
+  .navigation-links-container {
     visibility: initial;
-    color: var(--palOrange100);
-    opacity: 0;
-    width: fit-content;
-    list-style-type: none;
+    color: var(--grayish);
     display: flex;
-    gap: 0;
+    gap: 1.25rem;
+    animation: switch-color-to-yel 2s ease-in-out 3s forwards;
+    font-size: 1.25rem;
+  }
+
+  .navigation-link {
     position: relative;
-    font-weight: 100;
-    text-transform: uppercase;
-    animation: navigation-links-fade 2.5s cubic-bezier(.09,.26,.24,.79) 500ms forwards;
+    z-index: 15;
+    transition: color 500ms ease;
   }
-  
-  .navigation-links::after {
-    content: "";
+
+  .navigation-link:hover {
+    color: var(--blu100);
+  }
+
+  .navigation-link::before {
+    content: attr(data-title);
     position: absolute;
-    bottom: -5px;
-    width: 0%;
-    height: 0;
-    background-image: linear-gradient(45deg, var(--palOrange100), var(--palPurple400));
-    animation: navigation-links-bar 2s ease 500ms forwards;
+    font-family: "Kumar One Outline";
+    left: 0;
+    z-index: 14;
+    color: var(--yel100);
+    transform: translateX(0.16rem);
+    transition: transform 500ms ease;
   }
-  
-  @keyframes navigation-links-fade {
-    to {
-      color: var(--palOrange100);
-      opacity: 1;
-      gap: 1.25rem;
-      font-weight: 400;
-    }
+
+  .navigation-link:hover::before {
+    transform: translateX(0); 
   }
-  
-  @keyframes navigation-links-bar {
-    from {
-      width: 100%;
-      height: 6px;
-    }
+
+  @keyframes switch-color-to-grayish {
     to {
-      width: 0%;
-      height: 1.5px;
+      color: var(--grayish);
     }
   }
 }
