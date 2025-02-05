@@ -15,12 +15,33 @@
   .footer-link-list-item {
     @apply flex items-center gap-2 text-grayish;
   }
+}
 
-  .footer-list-title {
-    @apply font-styled-bold text-yel-200;
-  }
+.list-title-shadow {
+  position: relative;
+  z-index: 14;
+  color: var(--grayish);
+  animation: switch-color-to-yel 1s ease-in-out 500ms forwards
+}
+
+.list-title-shadow::before {
+  content: attr(data-title);
+  position: absolute;
+  left: 0;
+  color: var(--yel100);
+  font-family: "Kumar One Outline";
+  animation: move-shadow-left 1s ease-in-out 500ms forwards;
+  z-index: 13
 
 }
 
+@keyframes move-shadow-left {
+  to {
+    opacity: 0.6;
+    left: -0.12rem;
+    color: var(--grayish)
+
+  }
+}
 
 

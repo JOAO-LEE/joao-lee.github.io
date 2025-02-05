@@ -1,35 +1,55 @@
 import { Envelope, HouseLine, LinkedinLogo, ReadCvLogo, TelegramLogo, Warehouse, WhatsappLogo, XLogo } from "@phosphor-icons/react";
 import { Link } from "react-router";
 import "./Footer.css";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 export default function Footer() {
+  const {ref, isVisible} = useIntersectionObserver({threshold: 0.5})
 
   return (
-    <footer className="bg-blu-200 font-tipography">
+    <footer ref={ref} className="bg-blu-200 font-tipography">
       <div className="inner-content-footer">
-        <nav aria-label="Main navigation" className="space-y-1">
-          <span className="footer-list-title">Navigate</span>
+        <nav 
+        aria-label="Main navigation" 
+        className="space-y-1">
+          <span
+          data-title="Navigate" 
+          className={`font-styled-bold ${isVisible ? "list-title-shadow" : ""}`}
+          >
+            Navigate  
+          </span>
           <ul className="footer-link-list-container">
             <li>
-              <Link to="/" 
+              <Link 
+              to="/" 
               className="footer-link-list-item">
                 <HouseLine size="1.5rem"  className="text-yel-100"/> Home
               </Link>
             </li>
             <li>
-              <Link to="/projects" className="footer-link-list-item">
+              <Link 
+              to="/projects" 
+              className="footer-link-list-item">
                 <Warehouse size="1.5rem"  className="text-yel-100"/> Projects
               </Link>
             </li>
             <li>
-              <Link to="/resume" className="footer-link-list-item">
+              <Link 
+              to="/resume" 
+              className="footer-link-list-item">
                 <ReadCvLogo size="1.5rem" weight="bold"  className="text-yel-100"/> Resume
               </Link>
             </li>
           </ul>
           </nav>
         <address className="not-italic space-y-1">
-          <span className="footer-list-title">Get in touch</span>
+          <span 
+          data-title="Get in touch" 
+
+          className={`font-styled-bold ${isVisible ? "list-title-shadow" : ""}`}
+          >
+            Get in touch
+          </span>
           <ul className="footer-link-list-container">
             <li>
               <Link 
@@ -55,7 +75,13 @@ export default function Footer() {
           </ul>
         </address>
         <div className="mb-14 space-y-1">
-          <span className="footer-list-title">Socials</span>
+          <span 
+          className={`font-styled-bold ${isVisible ? "list-title-shadow" : ""}`}
+          data-title="Socials" 
+
+          >
+            Socials
+          </span>
           <ul className="footer-link-list-container">
             <li>
               <Link
