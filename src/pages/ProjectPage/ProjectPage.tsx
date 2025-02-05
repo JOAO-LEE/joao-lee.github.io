@@ -1,14 +1,16 @@
 import NotFound from "@/components/ui/NotFound/NotFound";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { Project } from "@/model/Project";
 import { useEffect, useState } from "react";
 import { projects } from "@/data/projects";
 import "./ProjectPage.css";
 import ImageSlider from "@/components/ui/ImageSlider/ImageSlider";
+import { ArrowLeft } from "@phosphor-icons/react";
 
 export function ProjectPage() {
 const [project, setProject] = useState<Project | null>(null);
 const params = useParams();
+const navigate = useNavigate()
 
 useEffect(() => {
   const selectedProject = projects.find(proj => proj.id === Number(params?.id));
@@ -16,8 +18,6 @@ useEffect(() => {
     setProject(selectedProject);
   }
 }, [project, params.id]);
-
-// const 
 
   return (
     <>
@@ -30,7 +30,11 @@ useEffect(() => {
         : 
           (
             <section className="p-4 space-y-5 overflow-hidden">
-              <div className="relative text-4xl">
+              <button className="flex items-center gap-2 border-b border-b-grayish p-1 text-yel-100" onClick={() => navigate(-1) }>
+                <ArrowLeft className="text-2xl"/>
+                <p className="font-titles">Go back</p>
+              </button>
+              <div className="text-4xl">
                 <h1 className="font-styled-bold tracking-widest project-title" data-title={project.name}>{project?.name}</h1>
               </div>
               <article className="about-project text-xs">
