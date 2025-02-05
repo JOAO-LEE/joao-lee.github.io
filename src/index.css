@@ -141,59 +141,60 @@ section .section-title {
   transform-origin: left;
 }
 
-/* dialog::backdrop {
-  background-color: blue;
-} */
+@keyframes switch-color-to-yel {
+  0% {
+    color: var(--grayish);
+  }
+  50% {
+    color: var(--grayish);
+  }
+  100% {
+    color: var(--yel200);
+  }
+}
 
-/* @media (prefers-reduced-motion: no-preference) { */
-  @keyframes switch-color-to-yel {
-    0% {
-      color: var(--grayish);
-    }
-    50% {
-      color: var(--grayish);
-    }
-    100% {
-      color: var(--yel200);
-    }
+@keyframes switch-color-to-grayish {
+  0% {
+    color: var(--yel200);
   }
+  50% {
+    color: var(--yel200);
+  }
+  100% {
+    color: var(--grayish);
+  }
+}
   
-  @keyframes switch-color-to-grayish {
-    0% {
-      color: var(--yel200);
-    }
-    50% {
-      color: var(--yel200);
-    }
-    100% {
-      color: var(--grayish);
-    }
+@keyframes general-fade-out {
+  from { 
+    opacity: 1
   }
-    
-  @keyframes general-fade-out {
-    from { 
-      opacity: 1
-    }
-    to {
-      opacity: 0;
-    }
+  to {
+    opacity: 0;
   }
-  
-  @keyframes heading-up {
-    to {
-      color: var(--yel200);
-      top: -50px;
-    }
-  }
-  
-  @keyframes scroll-watcher-animation {
-    to {
-      scale: 1 1;
-    }
-  }
+}
 
-  @keyframes reduce-letter-spacing {
-    to {
-      letter-spacing: normal
-    }
+@keyframes heading-up {
+  to {
+    color: var(--yel200);
+    top: -50px;
   }
+}
+
+@keyframes scroll-watcher-animation {
+  to {
+    scale: 1 1;
+  }
+}
+
+@keyframes reduce-letter-spacing {
+  to {
+    letter-spacing: normal
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1
+  }
+}

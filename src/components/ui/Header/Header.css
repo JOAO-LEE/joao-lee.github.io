@@ -8,6 +8,8 @@
   top: 0px;
   color: var(--grayish);
   backdrop-filter: blur(8px);
+  opacity: 0;
+  animation: fade-in 1s ease-in-out 2s forwards;
 }
 
 .glow-item:hover {
@@ -25,7 +27,7 @@
     color: var(--grayish);
     display: flex;
     gap: 1.25rem;
-    animation: switch-color-to-yel 2s ease-in-out 3s forwards;
+    animation: switch-color-to-yel 1.75s ease-in-out 3s forwards;
     font-size: 1.25rem;
   }
 
@@ -36,27 +38,21 @@
   }
 
   .navigation-link:hover {
-    color: var(--blu100);
+    color: var(--grayish);
   }
 
   .navigation-link::before {
     content: attr(data-title);
     position: absolute;
     font-family: "Kumar One Outline";
-    left: 0;
     z-index: 14;
     color: var(--yel100);
-    transform: translateX(0.16rem);
+    transform: translateX(-0.12rem);
     transition: transform 500ms ease;
   }
 
   .navigation-link:hover::before {
-    transform: translateX(0); 
-  }
-
-  @keyframes switch-color-to-grayish {
-    to {
-      color: var(--grayish);
-    }
+    transform: translateX(0.12rem);
+    color: var(--grayish) 
   }
 }
