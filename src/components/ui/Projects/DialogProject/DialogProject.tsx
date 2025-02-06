@@ -1,54 +1,57 @@
 import { RefObject } from 'react'
 import { Project } from '../../../../model/Project'
 import ProjectActions from '../ProjectActions/ProjectActions'
-import { Eye, X } from '@phosphor-icons/react'
-import { Link } from 'react-router'
+import { Eye, X } from '@phosphor-icons/react';
+import AnimatedButton from '../AnimatedButton/AnimatedButton'
 
 export function DialogProject({ dialogRef, selectedProject }: { dialogRef: RefObject<HTMLDialogElement>, selectedProject: Project | null }) {
 
   return (
     <dialog 
     ref={dialogRef} 
-    className="backdrop:bg-black/50 w-full bg-blu-200 p-4 border-none outline-none flex flex-col gap-4 project-dialog text-grayish"
+    className="backdrop:bg-black/50 w-full bg-blu-100 lg:w-1/3 lg:h-2/4/2 p-4 shadow-2xl outline-none flex flex-col gap-4 project-dialog text-grayish "
     >
       <div className="flex justify-between items-center">
-        <p className="text-yel-100 font-styled tracking-widest text-xl">{selectedProject?.name}</p>
+        <p className="text-yel-100 font-styled tracking-widest text-xl lg:text-3xl">{selectedProject?.name}</p>
         <X
-        className="text-yel-100 text-3xl"
+        className="text-yel-100 text-3xl lg:text-4xl"
         onClick={() => dialogRef.current?.close()} 
         />
       </div>
-      <img src={selectedProject?.coverImage} alt="" />
-      <article className="text-xs">
-        <p className="font-styled-bold text-lg text-yel-100">About</p>
+      <img 
+      src={selectedProject?.coverImage} 
+      alt=""
+      className='w-96 lg:mx-auto' 
+      />
+      <article className="text-xs lg:text-sm">
+        <p className="font-styled-bold text-lg text-yel-100 lg:text-2xl">About</p>
         <p className="text-justify text-grayish">{selectedProject?.description}</p>
       </article>
       <ul 
-      className="flex lowercase text-xs gap-2 justify-between flex-wrap"
+      className="flex lowercase text-xs gap-2 justify-between lg:justify-start lg:gap-6 flex-wrap"
       >
         {
           selectedProject?.techStackList
             .map((tech, index) => (
               <li 
               key={index}
-              className="flex items-center gap-1 bg-yel-100  text-blu-100 p-1"
+              className="flex items-center gap-1 bg-yel-100  text-blu-100 p-1 lg:text-sm"
               >
                 <i className={tech.iconClass}></i>
-                <span className="bg-yel-100 ">{tech.name}</span>
+                <span className="bg-yel-100">{tech.name}</span>
               </li>
           ))
         }
       </ul>
+      <div>
       <div className='flex justify-between items-center mt-4'>
         <ProjectActions
         deployed={selectedProject?.deployed ?? false} 
         applicationUrl={selectedProject?.applicationUrl ?? ""} 
         githubRepository={selectedProject?.githubRepository ?? ""} 
         />
-        <Link to={`/projects/${selectedProject?.id}`} className="flex items-center gap-2 border border-yel-100 p-1 text-xs text-yel-100">
-          <Eye className='text-sm' />
-          <span>see more</span>
-        </Link>
+        <AnimatedButton link={`/#/projects/${selectedProject?.id}`} icon={<Eye/>} title='see more'/>
+      </div>
       </div>
     </dialog>
   )
