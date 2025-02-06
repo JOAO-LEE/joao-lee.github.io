@@ -3,7 +3,7 @@ import "./Intro.css";
 export function Intro() {
   return (
     <section 
-    className="intro flex flex-col justify-center px-8 py-4"
+    className="intro flex flex-col justify-center px-8 py-4 h-screen"
     data-header-title="home"
     >
       <div 

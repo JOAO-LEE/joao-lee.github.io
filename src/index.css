@@ -54,7 +54,7 @@ body::-webkit-scrollbar {
 }
 
 section {
-  min-height: 100svh;
+  /* min-height: 100svh; */
 } 
 
 section .section-title {

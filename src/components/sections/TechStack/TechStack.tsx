@@ -14,25 +14,38 @@ export function TechStack() {
     >
       <SectionTitle textContent="tech stack"/>
       <div className="flex flex-col gap-7">
-        <TypeOfTech techStackTitle="basics"/>
-        <BasicTechList techSection="basics"/>
-        <TypeOfTech techStackTitle="frameworks"/>
-        <TechList 
-        itemsDirection="vertical"
-        >
-          {
-            techStack
-            .frontendTech 
-              .map(({iconClass, name}, index) => (
-                <TechItem key={index}>
-                  <i className={`${iconClass} text-7xl p-4`}></i>
-                  <p className="font-styled-tipography  text-yel-200 text-2xl">{name}</p>
-                </TechItem>
-              ))
-          }
-        </TechList>
+        <div className="flex flex-col gap-6 lg:flex-row lg:justify-between lg:items-center">
+          <div>
+          <TypeOfTech techStackTitle="basics"/>
+          <BasicTechList techSection="basics"/>
+          </div>
+          <div>
+
+          <TypeOfTech techStackTitle="frameworks"/>
+          <TechList 
+          itemsDirection="vertical"
+          >
+            {
+              techStack
+              .frontendTech 
+                .map(({iconClass, name}, index) => (
+                  <TechItem key={index}>
+                    <i className={`${iconClass} text-7xl p-4`}></i>
+                    <p className="font-styled-tipography  text-yel-200 text-2xl">{name}</p>
+                  </TechItem>
+                ))
+            }
+          </TechList>
+          </div>
+         
+        </div>
+        <div>
+        </div>
+        <div>
+
         <TypeOfTech techStackTitle="styling"/>
         <BasicTechList techSection="styling"/>
+        </div>
         <TypeOfTech techStackTitle="and much more..." />
         <div>
           <p className="text-sm text-center">click <Link to="/tech-stack"><b>here</b></Link> to see all or continue to see my projects below</p>

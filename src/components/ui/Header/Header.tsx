@@ -27,17 +27,17 @@ export function Header() {
               </Link>
             </li>
             <li>
-                <Link to="/" className="navigation-link" data-title="Projects">
+                <Link to="/projects" className="navigation-link" data-title="Projects">
                 Projects
                 </Link>
             </li>
             <li>
-                <Link to="/" className="navigation-link" data-title="Github">
+                <Link to="https://github.com/JOAO-LEE" className="navigation-link" data-title="Github">
                 Github
                 </Link>
               </li>
               <li>
-                <Link to="/"className="navigation-link" data-title="LinkedIn">
+                <Link to="https://linkedin.com/in/joao-lee-lima"className="navigation-link" data-title="LinkedIn">
                 LinkedIn
                 </Link>
               </li>

@@ -13,8 +13,8 @@ export function BasicTechList({ techSection }: { techSection: string }) {
             techStack[techSection as keyof typeof techStack]
               .map(({iconClass, name}, index) => (
               <li key={index} className={`stack-shown text-center space-y-2 border-b border-grayish ${isVisible ? "show-right show-content" : "hidden-left hidden-content"}`}>
-                <i className={`${iconClass} text-2xl`}></i>
-                <p className="text-xs text-yel-200 font-tipography">{name}</p>
+                <i className={`${iconClass} text-2xl lg:text-4xl`}></i>
+                <p className="text-xs lg:text-base text-yel-200 font-tipography">{name}</p>
               </li>
               ))
           }
