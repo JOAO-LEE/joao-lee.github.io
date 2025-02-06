@@ -15,7 +15,7 @@ export function TechStack() {
     className="bg-blu-200 p-4 overflow-hidden h-fit"
     >
       <SectionTitle textContent="tech stack"/>
-      <div className="grid gap-10  lg:py-10 px-8">
+      <div className="grid gap-10 py-12 lg:py-16 px-8">
         <div className="space-y-5 lg:w-2/3 lg:place-self-center">
           <TypeOfTech techStackTitle="basics"/>
           <BasicTechList techSection="basics"/>

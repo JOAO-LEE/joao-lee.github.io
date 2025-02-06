@@ -34,6 +34,11 @@ export const techStack = {
     { name: "Pytest", iconClass: "devicon-pytest-plain" },
     { name: "RTL", iconClass: "devicon-react-original" },
   ],
+  otherTech: [
+    { name: "Docker", iconClass: "devicon-docker-plain" },
+    { name: "Redux", iconClass: "devicon-redux-original" },
+    { name: "Sequelize", iconClass: "devicon-sequelize-plain" }
+  ],
   conteinerization: [
     { name: "Docker", iconClass: "devicon-docker-plain" },
 
