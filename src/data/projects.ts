@@ -58,4 +58,5 @@ export const projects: Array<Project> = [
     ],
     images: ["src/media/projects/petmatch/petmatch-homepage.png"]
   },
+  
 ];

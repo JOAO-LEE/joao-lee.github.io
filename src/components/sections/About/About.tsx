@@ -7,7 +7,7 @@ export function About() {
  const { ref, isVisible } = useIntersectionObserver<HTMLDivElement>({ threshold: 0.7 });
   return (
     <section 
-    className="bg-blu-400 p-6 h-svh overflow-hidden lg:h-[110vh]"
+    className="bg-blu-400 p-4 h-screen overflow-hidden lg:h-[75vh]"
     data-header-title="about"
     ref={ref}
     >

@@ -5,6 +5,7 @@ import { SectionTitle } from "@/components/ui/SectionTitle/SectionTitle";
 import { ProjectContext } from "@/context/Project/ProjectContext";
 import { DialogProject } from "@/components/ui/Projects/DialogProject/DialogProject";
 import "./Projects.css";
+import { TypeOfTech } from "@/components/ui/TechStack/TypeOfTech/TypeOfTech";
 
 export function Projects() {
   const { selectedProject } = useContext(ProjectContext);
@@ -12,21 +13,30 @@ export function Projects() {
 
   return (
     <section 
-    className="p-4"
+    className="p-4 h-fit"
     >
       <SectionTitle textContent="projects" /> 
-      <div 
-      className="flex flex-col gap-10"
-      >
-        {
-          projects.map((project, index) => (
-            <ProjectItem
-            dialogRef={dialogRef}
-            key={index} 
-            project={project}
-            />
-          ))
-        }
+      <div className="space-y-3 py-12 h-full">
+        <div className="flex flex-col items-center gap-2">
+
+          <TypeOfTech techStackTitle="what i have built"/>
+          <p className="font-styled-bold text-3xl">&</p>
+          <TypeOfTech techStackTitle="what i am building"/>
+
+        </div>
+        <div 
+        className="grid gap-4 lg:grid-cols-2 lg:px-8 lg:p"
+        >
+          {
+            projects.map((project, index) => (
+              <ProjectItem
+              dialogRef={dialogRef}
+              key={index} 
+              project={project}
+              />
+            ))
+          }
+        </div>
       </div>
       <DialogProject 
       dialogRef={dialogRef} 
