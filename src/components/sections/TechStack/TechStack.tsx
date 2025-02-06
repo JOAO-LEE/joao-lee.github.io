@@ -1,26 +1,26 @@
-import { Link } from "react-router";
 import { SectionTitle } from "@/components/ui/SectionTitle/SectionTitle";
 import { TypeOfTech } from "@/components/ui/TechStack/TypeOfTech/TypeOfTech";
 import {TechItem} from "@/components/ui/TechStack/TechItem/TechItem";
 import { BasicTechList } from "@/components/ui/TechStack/BasicTechList/BasicTechList";
 import { TechList } from "@/components/ui/TechStack/TechList/TechList";
 import { techStack } from "@/data/techStack";
+import { useState } from "react";
+import { SeeMoreTech } from "@/components/ui/SeeMoreTech/SeeMoreTech";
 
 export function TechStack() {
+  const [seeMore, setSeeMore] = useState<boolean>(false);
 
   return (
     <section  
-    className="bg-blu-200 p-4 overflow-hidden"
+    className="bg-blu-200 p-4 overflow-hidden h-fit"
     >
       <SectionTitle textContent="tech stack"/>
-      <div className="flex flex-col gap-7">
-        <div className="flex flex-col gap-6 lg:flex-row lg:justify-between lg:items-center">
-          <div>
+      <div className="grid gap-10  lg:py-10 px-8">
+        <div className="space-y-5 lg:w-2/3 lg:place-self-center">
           <TypeOfTech techStackTitle="basics"/>
           <BasicTechList techSection="basics"/>
-          </div>
-          <div>
-
+        </div>
+        <div className="space-y-5 lg:w-2/3 lg:place-self-center">
           <TypeOfTech techStackTitle="frameworks"/>
           <TechList 
           itemsDirection="vertical"
@@ -31,25 +31,40 @@ export function TechStack() {
                 .map(({iconClass, name}, index) => (
                   <TechItem key={index}>
                     <i className={`${iconClass} text-7xl p-4`}></i>
-                    <p className="font-styled-tipography  text-yel-200 text-2xl">{name}</p>
+                    <p className="font-styled-tipography  text-yel-200 text-xl lg:text-3xl">{name}</p>
                   </TechItem>
                 ))
             }
           </TechList>
-          </div>
-         
         </div>
-        <div>
+        <div className="space-y-5 lg:w-2/3 lg:place-self-center">
+          <TypeOfTech techStackTitle="styling"/>
+          <BasicTechList techSection="styling"/>
         </div>
-        <div>
-
-        <TypeOfTech techStackTitle="styling"/>
-        <BasicTechList techSection="styling"/>
-        </div>
-        <TypeOfTech techStackTitle="and much more..." />
-        <div>
-          <p className="text-sm text-center">click <Link to="/tech-stack"><b>here</b></Link> to see all or continue to see my projects below</p>
-        </div>
+        {
+          !seeMore 
+          &&
+            ( 
+              <div className="space-y-5 text-center lg:place-self-center">
+                <TypeOfTech techStackTitle="and much more..." />
+                <button
+                onClick={() => setSeeMore(true)} 
+                className="lg:text-xl font-styled-bold p-2  text-yel-200 tracking-widest underline underline-offset-8 decoration-grayish">
+                  see all
+                </button>
+                <p className="font-styled-bold lg:text-lg text-grayish">or</p>
+                  <p className="font-styled-bold lg:text-lg text-yel-100">scroll to see the projects i have done</p>
+          
+              </div>
+            )
+        }
+        {
+          seeMore 
+          &&    
+            (
+              <SeeMoreTech />
+            )
+        }
       </div>
     </section>
   )

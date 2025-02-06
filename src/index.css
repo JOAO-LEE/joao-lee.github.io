@@ -203,11 +203,11 @@ section .section-title {
   }
 
   .outer-heading {
-    height: 10rem;
+    height: 5rem;
   }
 
   .inner-heading {
-    line-height: 4.75rem;
+    line-height: 4rem;
     overflow: hidden;
     height: 4.75rem;
   }

@@ -6,7 +6,7 @@ export function TypeOfTech({ techStackTitle }: { techStackTitle: string }) {
   return (
      <p 
      ref={ref} 
-     className={`text-yel-200 font-styled-bold text-center lg:text-2xl lg:text-start ${isVisible ? "show-content" : "hidden-content"}`}
+     className={`text-yel-200 font-styled-bold text-center lg:text-2xl ${isVisible ? "show-content" : "hidden-content"}`}
      >
       {techStackTitle}
     </p>
