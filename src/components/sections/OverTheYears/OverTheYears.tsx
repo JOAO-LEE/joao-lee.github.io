@@ -9,7 +9,6 @@ export function OverTheYears() {
     className='p-6 overflow-hidden h-[50vh]'
     ref={ref}
     >
-    
       <div
       className="mx-auto about-texts-container space-y-5 text-xs content-center h-full">
         <div className={`about-text ${isVisible ? "show-content show-right" : "hidden-content hidden-left"}`}>

@@ -55,8 +55,6 @@ body::-webkit-scrollbar {
 
 section {
   min-height: 100svh;
-  /* scroll-snap-align: start;
-  scroll-snap-stop: always; */
 } 
 
 section .section-title {
@@ -197,4 +195,21 @@ section .section-title {
   to {
     opacity: 1
   }
+}
+
+@media (min-width: 1024px) {
+  section .section-title {
+    font-size: 2.75rem;
+  }
+
+  .outer-heading {
+    height: 10rem;
+  }
+
+  .inner-heading {
+    line-height: 4.75rem;
+    overflow: hidden;
+    height: 4.75rem;
+  }
+  
 }
