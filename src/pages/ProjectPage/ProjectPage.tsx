@@ -60,7 +60,8 @@ useEffect(() => {
                   </ul>
                 </article>
               </div>
-              <div className={`flex flex-col-reverse lg:flex-row gap-4 ${project.inDevelopment ? "lg:justify-between" : "lg:justify-start"} lg:items-end text-xs lg:text-sm`}>
+              <div 
+              className={`flex flex-col-reverse lg:flex-row gap-4 ${project.inDevelopment ? "lg:justify-between" : "lg:justify-start"} lg:items-end text-xs lg:text-sm`}>
                 {
                   project.inDevelopment 
                   && 
@@ -85,7 +86,7 @@ useEffect(() => {
                             to={project.applicationUrl}
                             >
                             <AppWindow className="text-2xl"/>  
-                            <p>see the app</p>
+                            <p>app</p>
                             </Link>
                           </li>
                         )
