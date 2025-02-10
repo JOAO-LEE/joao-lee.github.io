@@ -7,6 +7,10 @@
   .inner-content-footer {
     @apply px-[15vw] pt-20 pb-20 flex flex-col gap-7;
   }
+
+  .main-content-footer {
+    @apply flex flex-col gap-3.5  
+  }
     
   .footer-link-list-container {
     @apply flex flex-col gap-3;
@@ -32,7 +36,6 @@
   font-family: "Kumar One Outline";
   animation: move-shadow-left 1s ease-in-out 500ms forwards;
   z-index: 13
-
 }
 
 @keyframes move-shadow-left {
@@ -40,8 +43,18 @@
     opacity: 0.6;
     left: -0.12rem;
     color: var(--grayish)
-
   }
 }
 
-
+@media (min-width: 1024px) {
+  .inner-content-footer {
+    @apply px-[5vw] pt-20 pb-10;
+  }
+    
+  .footer-link-list-container {
+    @apply flex flex-col gap-3;
+  }
+  .main-content-footer {
+    @apply flex flex-row justify-between
+  }
+}

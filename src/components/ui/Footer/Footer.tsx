@@ -9,6 +9,8 @@ export default function Footer() {
   return (
     <footer ref={ref} className="bg-blu-200 font-tipography">
       <div className="inner-content-footer">
+        <div className="main-content-footer">
+
         <nav 
         aria-label="Main navigation" 
         className="space-y-1">
@@ -99,6 +101,7 @@ export default function Footer() {
               </Link>
             </li>
           </ul>
+        </div>
         </div>
         <div className="pt-[3em] border-t border-t-yel-100 footer-link-list-item">
           <span>&copy;</span>
