@@ -1,4 +1,4 @@
-import { List, Sun } from "@phosphor-icons/react";
+import { List } from "@phosphor-icons/react";
 import { useContext } from "react";
 import { MobileNavigation } from "../MobileNavigation/MobileNavigation";
 import { MobileNavigationContext } from "../../../context/MobileNavigation/MobileNavigationContext";
@@ -43,10 +43,10 @@ export function Header() {
               </li>
           </ul>
         </nav>
-        <Sun 
+        {/* <Sun 
         className="cursor-pointer hover:scale-110 duration-500 test-animation theme-switch" 
         size={32} 
-        />
+        /> */}
       </header>
     </>
   );

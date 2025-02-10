@@ -10,7 +10,7 @@ export type Project = {
   applicationUrl: string
   techStackList: Array<TechStackItem>
   images: Array<string>
-  
+  inDevelopment: boolean
 }
 
 export type ProjectContext = {
