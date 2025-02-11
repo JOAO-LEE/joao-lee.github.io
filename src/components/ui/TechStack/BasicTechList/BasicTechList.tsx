@@ -4,6 +4,7 @@ import { techStack } from "@/data/techStack";
 
 export function BasicTechList({ techSection }: { techSection: string }) {
   const { ref, isVisible } = useIntersectionObserver<HTMLDivElement>({threshold: 0.5});
+  
   return (
     <div ref={ref}>
       <TechList 

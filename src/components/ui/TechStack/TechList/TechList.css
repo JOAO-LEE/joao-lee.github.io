@@ -3,5 +3,5 @@
 }
 
 .stack-shown:nth-child(n) {
-  transition-delay: calc(200ms * (n + 1));
+  transition-delay: calc(300ms * n);
 }

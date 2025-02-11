@@ -10,7 +10,7 @@ export default function ImageSlider({ imageSource }: {imageSource: string}) {
       <img 
       src={imageSource} 
       alt=""
-      className={`${isVisible ? "show-content" : "hidden-content"}`} 
+      className={`${isVisible ? "show-content" : "hidden-content"} object-contain`} 
       />
     </li>
   )

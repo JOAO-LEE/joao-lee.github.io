@@ -1,0 +1,16 @@
+.project-dialog {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s; 
+} 
+
+.project-dialog[open] {
+  animation: fade-in-modal 1s ease forwards;
+  pointer-events: inherit;
+}
+
+@keyframes fade-in-modal{
+  to {
+    opacity: 1;
+  }
+}

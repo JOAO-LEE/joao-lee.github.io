@@ -6,6 +6,7 @@ import { ProjectContext } from "@/context/Project/ProjectContext";
 import { DialogProject } from "@/components/ui/Projects/DialogProject/DialogProject";
 import "./Projects.css";
 import { TypeOfTech } from "@/components/ui/TechStack/TypeOfTech/TypeOfTech";
+import { Link } from "react-router";
 
 export function Projects() {
   const { selectedProject } = useContext(ProjectContext);
@@ -42,6 +43,11 @@ export function Projects() {
       dialogRef={dialogRef} 
       selectedProject={selectedProject}
       />
+      <div className="text-center text-xl text-yel-100 font-styled-bold underline decoration-grayish underline-offset-8">
+        <Link to="/projects">
+          see all projects
+        </Link>
+      </div>
     </section>
   )
 }

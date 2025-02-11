@@ -1,0 +1,28 @@
+.farewell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+
+  .hidden-left-farewell-title {
+    transform: translateX(-50%);
+  }
+
+  .hidden-right-farewell-paragraph {
+    transform: translateX(25%);
+  }
+
+  .hidden-down {
+    transform: translateY(50px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .farewell {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0;
+  }
+}

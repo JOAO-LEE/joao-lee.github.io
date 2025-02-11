@@ -9,7 +9,7 @@ export function MobileNavigation() {
 
   return (
     <div 
-    className={`menu ${isMobileNavigationOpen ? "open" : "close"} h-full`}
+    className={`menu ${isMobileNavigationOpen ? "open" : "close"} h-full lg:hidden lg:invisible`}
     >
       <X
       className={`size-10 ${!!isMobileNavigationOpen && "x-open"}`} 
@@ -18,28 +18,34 @@ export function MobileNavigation() {
       <nav 
       className="menu-navigation uppercase font-styled-bold tracking-widest">
         <li
-        data-title="Home"
-        className={`nav-item ${isMobileNavigationOpen ? "nav-item-fade-in link-title" : "nav-item-fade-out"}`}
         >
-          <Link to="/">
+          <Link 
+          data-title="Home"
+          className={`nav-item link-title ${isMobileNavigationOpen ? "nav-item-fade-in link-title-shadow" : "nav-item-fade-out"}`}
+          to="/"
+          >
             Home
           </Link>
         </li>
         <li
-        data-title="Github" 
-        className={`nav-item ${isMobileNavigationOpen ? "nav-item-fade-in link-title" : "nav-item-fade-out"}`}
         >
-          <a href="https://github.com/JOAO-LEE">
+          <Link 
+          data-title="Github" 
+          className={`nav-item link-title ${isMobileNavigationOpen ? "nav-item-fade-in link-title-shadow" : "nav-item-fade-out"}`}
+          to="https://github.com/JOAO-LEE"
+          >
            Github
-          </a>
+          </Link>
         </li>
         <li
-        data-title="LinkedIn" 
-        className={`nav-item  ${isMobileNavigationOpen ? "nav-item-fade-in link-title" : "nav-item-fade-out"}`}
         >
-          <a href="https://www.linkedin.com/in/joao-lee-lima/">
+          <Link 
+          data-title="LinkedIn" 
+          className={`nav-item link-title ${isMobileNavigationOpen ? "nav-item-fade-in link-title-shadow" : "nav-item-fade-out"}`}
+          to="https://www.linkedin.com/in/joao-lee-lima/"
+          >
             LinkedIn
-          </a>
+          </Link>
         </li>
       </nav>
     </div>
