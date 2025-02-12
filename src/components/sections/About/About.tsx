@@ -52,7 +52,7 @@ export function About() {
               </article>
           </div>
           <img 
-          src="src/media/habbo/habbo-diagonal-smiling-holding-coffee.png"
+          src="/public/habbo/habbo-diagonal-smiling-holding-coffee.png"
           className={`w-1/3 lg:w-1/5 self-center lg:self-end ${isVisible ? "show-content swipe-to-origin-y" : "hidden-content hidden-down"}`}
           alt="image of sitting habbo hotel character holding a cup of coffe and smiling" 
           />

@@ -7,7 +7,7 @@ import "./Project.css";
 export function ProjectItem({ project, dialogRef }: 
   { project: ProjectModel, dialogRef: RefObject<HTMLDialogElement> }) {
   const { selectProject } = useContext(ProjectContext);
-  const { ref, isVisible } = useIntersectionObserver<HTMLDivElement>({threshold: 0.5})
+  const { ref, isVisible } = useIntersectionObserver<HTMLLIElement>({threshold: 0.5})
  
   const handleProjectDisplay = () => {
     selectProject(project);
@@ -15,7 +15,7 @@ export function ProjectItem({ project, dialogRef }:
   }
   
   return (
-    <div
+    <li
     ref={ref}
     className="group cursor-pointer" 
     onClick={() => {
@@ -42,6 +42,6 @@ export function ProjectItem({ project, dialogRef }:
           </ul>
         </div>
       </div>
-    </div>
+    </li>
   )
 }

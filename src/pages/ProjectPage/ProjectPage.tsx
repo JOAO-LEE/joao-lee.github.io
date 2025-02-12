@@ -1,18 +1,18 @@
 import NotFound from "@/components/ui/NotFound/NotFound";
-import { useNavigate, useParams } from "react-router";
+import {  useParams } from "react-router";
 import { Project } from "@/model/Project";
 import { useEffect, useState } from "react";
 import { projects } from "@/data/projects";
 import ImageSlider from "@/components/ui/ImageSlider/ImageSlider";
-import { AppWindow, ArrowLeft, BracketsCurly, Gear } from "@phosphor-icons/react";
+import { AppWindow, BracketsCurly, Gear } from "@phosphor-icons/react";
 import { IconedLink } from "@/components/ui/IconedLink/IconedLink";
 import { LittleTechStackItem } from "@/components/ui/TechStack/LittleTechStackItem/LittleTechStackItem";
 import "./ProjectPage.css";
+import {GoBackButton} from "@/components/ui/GoBackButton/GoBackButton";
 
 export function ProjectPage() {
 const [project, setProject] = useState<Project | null>(null);
 const params = useParams();
-const navigate = useNavigate();
 
 useEffect(() => {
   const selectedProject = projects.find(proj => proj.id === Number(params?.id));
@@ -32,19 +32,7 @@ useEffect(() => {
         : 
           (
             <section className="p-4 flex flex-col gap-6 overflow-hidden">
-              <button 
-              className="flex items-center gap-2 p-1 text-yel-100" 
-              onClick={() => navigate(-1)}
-              >
-                <ArrowLeft 
-                className="text-2xl"
-                />
-                <p 
-                className="font-titles underline underline-offset-8 decoration-grayish"
-                >
-                  Go back
-                </p>
-              </button>
+             <GoBackButton />
               <div 
               className="text-4xl lg:text-5xl"
               >

@@ -11,7 +11,7 @@ export function Farewell() {
     >
       <div className="farewell">
         <img 
-        src="src/media/habbo/habbo-waving.png"
+        src="/public/habbo/habbo-waving.png"
         className={`w-1/3 lg:w-1/6 ${isVisible ? "show-content swipe-to-origin-y" : "hidden-content hidden-down"}`}
         alt="image of a habbo hotel character waving" 
         loading="lazy"
