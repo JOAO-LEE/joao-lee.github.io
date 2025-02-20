@@ -3,7 +3,7 @@ import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { useEffect, useState } from "react";
 
 export function About() {
-  const { ref, isVisible } = useIntersectionObserver({ threshold: 0.9 });
+  const { ref, isVisible } = useIntersectionObserver({ threshold: 0.6 });
   const [habboIsNotWalking, setHabboIsNotWalking] = useState(false);
 
   const titleOverTheYearsAnimationClass = isVisible

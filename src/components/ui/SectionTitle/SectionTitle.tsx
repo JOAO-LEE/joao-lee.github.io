@@ -2,7 +2,7 @@ import { useIntersectionObserver } from "../../../hooks/useIntersectionObserver"
 
 export function SectionTitle({ textContent }: { textContent: string }) {
   const { isVisible, ref } = useIntersectionObserver<HTMLDivElement>({
-    threshold: 0.1,
+    threshold: 0.3,
   });
 
   return (
