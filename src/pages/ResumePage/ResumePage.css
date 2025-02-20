@@ -1,0 +1,14 @@
+.resume-info, .habbo-download-container {
+  opacity: 0;
+  filter: blur(5px);
+}
+
+.resume-info {
+  transform: translateY(12.5rem);
+  animation: fade-in 1.5s ease-in-out forwards, remove-blur 1.5s ease-in-out 0.5s forwards, swipe-origin-y-animation 1.5s ease-in-out forwards, switch-color-to-yel 1.5s ease-in-out 0.5s forwards;
+}
+
+.habbo-download-container {
+  transform: translateY(-12.5rem);
+  animation: fade-in 1.5s ease-in-out forwards, remove-blur 1.5s ease-in-out 0.5s forwards, swipe-origin-y-animation 1.5s ease-in-out forwards;
+}

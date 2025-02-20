@@ -2,18 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer components {
   .inner-content-footer {
     @apply px-[15vw] pt-20 pb-20 flex flex-col gap-7;
   }
 
   .main-content-footer {
-    @apply flex flex-col gap-3.5  
+    @apply flex flex-col gap-8;
   }
     
   .footer-link-list-container {
-    @apply flex flex-col gap-3;
+    @apply flex flex-col gap-4;
   }
 
   .footer-link-list-item {
@@ -25,23 +24,30 @@
   position: relative;
   z-index: 14;
   color: var(--grayish);
-  animation: switch-color-to-yel 1s ease-in-out 500ms forwards
+  animation: switch-color-to-yel 1s ease-in-out 500ms forwards;
+  transition: all 1s ease-in-out;
+
 }
 
 .list-title-shadow::before {
   content: attr(data-title);
   position: absolute;
-  left: 0;
-  color: var(--yel100);
-  font-family: "Kumar One Outline";
-  animation: move-shadow-left 1s ease-in-out 500ms forwards;
-  z-index: 13
+  left: 0.2rem;
+  color: var(--grayish);
+  font-family: "Kumar One Outline", serif, system-ui;
+  z-index: 13;
+  width: 100%;
 }
+
+.move-shadow-left-animation::before {
+  animation: move-shadow-left 500ms ease-in-out 500ms forwards;
+}
+
 
 @keyframes move-shadow-left {
   to {
     opacity: 0.6;
-    left: -0.12rem;
+    left: -0.2rem;
     color: var(--grayish)
   }
 }

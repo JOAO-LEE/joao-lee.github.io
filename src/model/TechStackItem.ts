@@ -1,1 +1,1 @@
-export type TechStackItem = { iconClass: string, name: string }
+export type TechStackItem = { iconClass: string; name: string };

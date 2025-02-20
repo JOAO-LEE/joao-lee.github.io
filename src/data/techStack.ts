@@ -37,16 +37,9 @@ export const techStack = {
   otherTech: [
     { name: "Docker", iconClass: "devicon-docker-plain" },
     { name: "Redux", iconClass: "devicon-redux-original" },
-    { name: "Sequelize", iconClass: "devicon-sequelize-plain" }
-  ],
-  conteinerization: [
-    { name: "Docker", iconClass: "devicon-docker-plain" },
-
-  ],
-  stateManagement: [
-    { name: "Redux", iconClass: "devicon-redux-original" },
-  ],
-  orm: [
     { name: "Sequelize", iconClass: "devicon-sequelize-plain" },
   ],
-}
+  conteinerization: [{ name: "Docker", iconClass: "devicon-docker-plain" }],
+  stateManagement: [{ name: "Redux", iconClass: "devicon-redux-original" }],
+  orm: [{ name: "Sequelize", iconClass: "devicon-sequelize-plain" }],
+};

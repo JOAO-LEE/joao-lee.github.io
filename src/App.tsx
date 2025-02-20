@@ -1,13 +1,12 @@
-import {  Route, Routes } from "react-router";
+import { Route, Routes } from "react-router";
 import { Layout } from "./components/layout/Layout";
 import { HomePage } from "./pages/HomePage/HomePage";
 import { ProjectPage } from "./pages/ProjectPage/ProjectPage";
-import { ResumePage } from "./pages/ResumePage/ResumePage";
 import { ProjectsPage } from "./pages/ProjectsPage/ProjectsPage";
+import { ResumePage } from "./pages/ResumePage/ResumePage";
 import "./index.css";
 
 function App() {
-  
   return (
     <Routes>
       <Route element={<Layout />}>
@@ -17,7 +16,7 @@ function App() {
         <Route path="resume" element={<ResumePage />} />
       </Route>
     </Routes>
-  )
+  );
 }
 
 export default App;

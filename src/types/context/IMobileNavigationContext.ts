@@ -1,4 +1,4 @@
 export type IMobileNavigationContext = {
-  isMobileNavigationOpen: boolean
+  isMobileNavigationOpen: boolean;
   handleMobileNavigation: () => void;
-}
+};

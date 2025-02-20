@@ -1,0 +1,25 @@
+.page-title {
+  position: relative;
+  color: var(--grayish);
+  text-decoration: underline;
+  text-decoration-color: var(--yel200);
+  animation: switch-color-to-yel 1s ease-in-out 500ms forwards,
+  switch-underline-color-to-grayish 1s ease-in-out 500ms forwards;
+  font-size: 2.5rem;
+}
+
+.page-title::before {
+  content: attr(data-title);
+  font-family: "Kumar One Outline";
+  position: absolute;
+  left: 0;
+  animation: page-title-shadow-move 1s ease-in-out 500ms forwards;
+}
+
+@keyframes page-title-shadow-move {
+  to {
+    opacity: 0.6;
+    left: -0.20rem;
+    color: var(--grayish);
+  }
+}

@@ -1,53 +1,15 @@
-.project-title {
-  position: relative;
-  color: var(--grayish);
-  text-decoration: underline;
-  text-decoration-color: var(--yel200);
-  animation: switch-color-to-yel 1s ease-in-out 500ms forwards,
-  switch-underline-color-to-grayish 1s ease-in-out 500ms forwards
-}
-
-.project-title::before {
-  content: attr(data-title);
-  font-family: "Kumar One Outline";
-  position: absolute;
-  left: 0;
-  animation: shadow-move 1s ease-in-out 500ms forwards
-}
-
 .about-project {
   transform: translateX(-110%);
   opacity: 0;
   filter: blur(1rem);
-  animation: fade-in-project-about 1.5s ease-in-out 0.25s forwards, swipe-to-origin-x-animation 1.5s ease-in-out 0.25s forwards, remove-blur 2s ease-in-out 0.25s forwards;
+  animation: fade-in-project-about 1.5s ease-in-out 0.25s forwards, swipe-origin-x-animation 1.5s ease-in-out 0.25s forwards, remove-blur 2s ease-in-out 0.25s forwards;
 }
 
 .project-actions {
   transform: translateX(50%);
-  animation: fade-in-project-about 1.5s ease-in-out 0.25s forwards, swipe-to-origin-x-animation 1.5s ease-in-out 0.25s forwards, remove-blur 2s ease-in-out 0.25s forwards;
+  animation: fade-in-project-about 1.5s ease-in-out 0.25s forwards, swipe-origin-x-animation 1.5s ease-in-out 0.25s forwards, remove-blur 2s ease-in-out 0.25s forwards;
   opacity: 0;
   filter: blur(1rem);
-
-}
-
-@keyframes remove-blur {
-  to {
-    filter: blur(0);
-  }
-}
-
-@keyframes shadow-move {
-  to {
-    opacity: 0.6;
-    left: -0.20rem;
-    color: var(--grayish);
-  }
-}
-
-@keyframes swipe-to-origin-x-animation {
-  to {
-    transform: translateX(0);
-  }
 }
 
 @keyframes switch-underline-color-to-grayish {

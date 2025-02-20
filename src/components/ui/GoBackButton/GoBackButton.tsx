@@ -1,22 +1,19 @@
-import { ArrowLeft } from "@phosphor-icons/react"
+import { House } from "@phosphor-icons/react";
 import { useNavigate } from "react-router";
 
 export function GoBackButton() {
   const navigate = useNavigate();
 
   return (
-    <button 
-    className="flex items-center gap-2 p-1 text-yel-100" 
-    onClick={() => navigate(-1)}
+    <button
+      type="button"
+      className="flex items-end gap-2 p-1 text-yel-100"
+      onClick={() => navigate("/")}
     >
-      <ArrowLeft 
-      className="text-2xl"
-      />
-      <p 
-      className="font-titles underline underline-offset-8 decoration-grayish"
-      >
+      <House className="text-2xl" />
+      <p className="font-titles underline underline-offset-8 decoration-grayish">
         Go back
       </p>
     </button>
-  )
+  );
 }

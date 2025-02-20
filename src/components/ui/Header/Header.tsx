@@ -1,7 +1,7 @@
 import { List } from "@phosphor-icons/react";
 import { useContext } from "react";
-import { MobileNavigation } from "../MobileNavigation/MobileNavigation";
 import { MobileNavigationContext } from "../../../context/MobileNavigation/MobileNavigationContext";
+import { MobileNavigation } from "../MobileNavigation/MobileNavigation";
 import "./Header.css";
 import { Link } from "react-router";
 
@@ -10,14 +10,12 @@ export function Header() {
 
   return (
     <>
-      <MobileNavigation />      
-      <header 
-      className="flex justify-between items-center p-4 sticky-header w-full top-0 text-yel-100 z-10"
-      > 
-        <List 
-        size={32} 
-        className="lg:hidden" 
-        onClick={handleMobileNavigation} 
+      <MobileNavigation />
+      <header className="flex justify-between items-center p-4 sticky-header w-full top-0 text-yel-100 z-10">
+        <List
+          size={32}
+          className="lg:hidden"
+          onClick={handleMobileNavigation}
         />
         <nav className="grow">
           <ul className="navigation-links-container font-styled-bold lowercase tracking-wider">
@@ -27,20 +25,42 @@ export function Header() {
               </Link>
             </li>
             <li>
-                <Link to="/projects" className="navigation-link" data-title="Projects">
+              <Link
+                to="/projects"
+                className="navigation-link"
+                data-title="Projects"
+              >
                 Projects
-                </Link>
+              </Link>
             </li>
             <li>
-                <Link to="https://github.com/JOAO-LEE" className="navigation-link" data-title="Github">
+              <Link
+                to="/resume"
+                className="navigation-link"
+                data-title="Resume"
+              >
+                Resume
+              </Link>
+            </li>
+            <li>|</li>
+            <li>
+              <Link
+                to="https://github.com/JOAO-LEE"
+                className="navigation-link"
+                data-title="Github"
+              >
                 Github
-                </Link>
-              </li>
-              <li>
-                <Link to="https://linkedin.com/in/joao-lee-lima"className="navigation-link" data-title="LinkedIn">
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="https://linkedin.com/in/joao-lee-lima"
+                className="navigation-link"
+                data-title="LinkedIn"
+              >
                 LinkedIn
-                </Link>
-              </li>
+              </Link>
+            </li>
           </ul>
         </nav>
         {/* <Sun 

@@ -1,4 +1,4 @@
 import { createContext } from "react";
-import { ProjectContext as ProjectModel } from "../../model/Project";
+import type { ProjectContext as ProjectModel } from "../../model/Project";
 
-export const ProjectContext = createContext<ProjectModel>({} as ProjectModel); 
+export const ProjectContext = createContext<ProjectModel>({} as ProjectModel);
