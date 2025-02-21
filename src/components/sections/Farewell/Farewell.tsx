@@ -3,7 +3,7 @@ import "./Farewell.css";
 import { useEffect, useState } from "react";
 
 export function Farewell() {
-  const { ref, isVisible } = useIntersectionObserver({ threshold: 0.5 });
+  const { ref, isVisible } = useIntersectionObserver({ threshold: 0.8 });
   const [habboIsNotWalking, setHabboIsNotWalking] = useState(false);
 
   useEffect(() => {
