@@ -3,7 +3,7 @@ import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import "./MoreAbout.css";
 
 export function MoreAbout() {
-  const { ref, isVisible } = useIntersectionObserver({ threshold: 0.9 });
+  const { ref, isVisible } = useIntersectionObserver({ threshold: 0.5 });
 
   return (
     <section className="p-6 overflow-hidden bg-blu-400 min-h-lvh" ref={ref}>
