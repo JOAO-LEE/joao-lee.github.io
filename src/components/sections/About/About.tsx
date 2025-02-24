@@ -84,7 +84,7 @@ export function About() {
         />
         <img
           src="habbo/habbo-walking-2.png"
-          className={`min-w-32 lg:w-80 self-center lg:self-center object-contain transition-transform ease-linear duration-[2100ms] lg:duration-2000  ${isVisible ? "translate-x-0 " : "translate-x-[200%] lg:translate-x-[165%]"} ${habboIsNotWalking ? "hidden lg:hidden" : "block"}`}
+          className={`min-w-32 lg:w-80 self-center lg:self-center object-contain transition-transform ease-linear duration-[2100ms] lg:duration-2000  ${isVisible ? "translate-x-0 " : "translate-x-[220%] lg:translate-x-[165%]"} ${habboIsNotWalking ? "hidden lg:hidden" : "block"}`}
           alt="habbo hotel character walking"
         />
       </div>

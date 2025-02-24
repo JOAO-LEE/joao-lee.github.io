@@ -26,7 +26,7 @@
     gap: 0;
 
     .hidden-down-character {
-      transform: translateX(-100%);
+      transform: translateX(-160%);
     }
   }
 }
