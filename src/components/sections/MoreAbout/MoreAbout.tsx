@@ -6,9 +6,9 @@ export function MoreAbout() {
   const { ref, isVisible } = useIntersectionObserver({ threshold: 0.9 });
 
   return (
-    <section className="p-6 overflow-hidden bg-blu-400 h-lvh" ref={ref}>
+    <section className="p-6 overflow-hidden bg-blu-400 min-h-lvh" ref={ref}>
       <SectionTitle textContent="+ about" />
-      <div className="about-texts-container text-xs lg:text-sm mx-auto lg:mx-0">
+      <div className="about-texts-container text-xs lg:text-sm mx-auto lg:mx-0 min-h-lvh">
         <div
           className={`about-text ${isVisible ? "show-content shown-texts" : "hidden-content hidden-texts"}`}
         >

@@ -7,7 +7,7 @@
   height: 100%;
 
   .hidden-down-character {
-    transform: translateX(-180%);
+    transform: translateX(-200%);
   }
 
   .hidden-left-farewell-title {
