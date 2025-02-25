@@ -31,7 +31,7 @@ export function Farewell() {
           <h2
             className={`font-styled-bold lg:text-3xl ${isVisible ? "swipe-to-origin-x show-content color-yel-animation" : "hidden-content hidden-left-farewell-title text-grayish"}`}
           >
-            I am really glad to having you here!
+            I am really glad having you here!
           </h2>
           <div
             className={`font-styled-bold space-y-3 ${isVisible ? "show-content swipe-to-origin-x" : "hidden-content hidden-right-farewell-paragraph"}`}
